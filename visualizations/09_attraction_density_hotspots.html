@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_fd24cb62d7c471137ba06c844641b090 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; 
+                top: 10px; left: 50px; width: 300px; height: 40px; 
+                background-color: white; z-index: 9999; padding: 10px;
+                border: 2px solid grey; border-radius: 5px;">
+        <b>Attraction Density Hotspots</b>
+    </div>
+    
+    
+    <div style="position: fixed; 
+                bottom: 50px; right: 50px; width: 200px; height: 120px;
+                background-color: white; z-index: 9999; padding: 10px;
+                border: 2px solid grey; border-radius: 5px; font-size: 12px;">
+        <b>Density Legend</b><br>
+        <span style="color: darkred;">● High Density</span><br>
+        <span style="color: orange;">● Medium Density</span><br>
+        <span style="color: yellow;">● Low Density</span><br>
+        Max: 20 attractions
+    </div>
+    
+    
+            <div class="folium-map" id="map_fd24cb62d7c471137ba06c844641b090" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_fd24cb62d7c471137ba06c844641b090 = L.map(
+                "map_fd24cb62d7c471137ba06c844641b090",
+                {
+                    center: [11.1271, 78.6569],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_fd24cb62d7c471137ba06c844641b090);
+
+            
+
+        
+    
+            var tile_layer_fb705b6bb011687b1a3d1666d944949d = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_fb705b6bb011687b1a3d1666d944949d.addTo(map_fd24cb62d7c471137ba06c844641b090);
+        
+    
+            var circle_marker_7945658af3195b2fbea4338b7472d3b5 = L.circleMarker(
+                [13.0247674, 80.2182663],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30.0, "stroke": true, "weight": 3}
+            ).addTo(map_fd24cb62d7c471137ba06c844641b090);
+        
+    
+        var popup_ec0e8bd3fbb29cc8f659db4df1a9c74f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7f4812f8570b0e0deb0a3c42dbcf24af = $(`<div id="html_7f4812f8570b0e0deb0a3c42dbcf24af" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif;">             <h4 style="margin: 0 0 10px 0;">MLA OFFICE </h4>             <p><b>Attraction Density:</b> 20</p>             <p><i>Number of nearby attractions within 5km radius</i></p>         </div>         </div>`)[0];
+                popup_ec0e8bd3fbb29cc8f659db4df1a9c74f.setContent(html_7f4812f8570b0e0deb0a3c42dbcf24af);
+            
+        
+
+        circle_marker_7945658af3195b2fbea4338b7472d3b5.bindPopup(popup_ec0e8bd3fbb29cc8f659db4df1a9c74f)
+        ;
+
+        
+    
+    
+            circle_marker_7945658af3195b2fbea4338b7472d3b5.bindTooltip(
+                `<div>
+                     MLA OFFICE : Density 20
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bd9f0fed15a2887acbcd24acccb51cdd = L.circleMarker(
+                [13.0263685, 80.2171939],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 28.75, "stroke": true, "weight": 3}
+            ).addTo(map_fd24cb62d7c471137ba06c844641b090);
+        
+    
+        var popup_42b7a6fa2f86b9b14d4b66b8709aae18 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9168d749fee357783a0228cf794099a6 = $(`<div id="html_9168d749fee357783a0228cf794099a6" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif;">             <h4 style="margin: 0 0 10px 0;">CHENNAI CORPORATION PARK</h4>             <p><b>Attraction Density:</b> 19</p>             <p><i>Number of nearby attractions within 5km radius</i></p>         </div>         </div>`)[0];
+                popup_42b7a6fa2f86b9b14d4b66b8709aae18.setContent(html_9168d749fee357783a0228cf794099a6);
+            
+        
+
+        circle_marker_bd9f0fed15a2887acbcd24acccb51cdd.bindPopup(popup_42b7a6fa2f86b9b14d4b66b8709aae18)
+        ;
+
+        
+    
+    
+            circle_marker_bd9f0fed15a2887acbcd24acccb51cdd.bindTooltip(
+                `<div>
+                     CHENNAI CORPORATION PARK: Density 19
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f62da0e132e6a2dc1b1de7266dfa45af = L.circleMarker(
+                [13.0323409, 80.2200818],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 28.75, "stroke": true, "weight": 3}
+            ).addTo(map_fd24cb62d7c471137ba06c844641b090);
+        
+    
+        var popup_d5d1ebab7d86a73d53ef66db03de8f59 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8c9af6b2760dc870c5b80922a93955a3 = $(`<div id="html_8c9af6b2760dc870c5b80922a93955a3" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif;">             <h4 style="margin: 0 0 10px 0;">CHICKEN 65 SHOP</h4>             <p><b>Attraction Density:</b> 19</p>             <p><i>Number of nearby attractions within 5km radius</i></p>         </div>         </div>`)[0];
+                popup_d5d1ebab7d86a73d53ef66db03de8f59.setContent(html_8c9af6b2760dc870c5b80922a93955a3);
+            
+        
+
+        circle_marker_f62da0e132e6a2dc1b1de7266dfa45af.bindPopup(popup_d5d1ebab7d86a73d53ef66db03de8f59)
+        ;
+
+        
+    
+    
+            circle_marker_f62da0e132e6a2dc1b1de7266dfa45af.bindTooltip(
+                `<div>
+                     CHICKEN 65 SHOP: Density 19
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_55de4606dc72c36252fdde6fe2d1f850 = L.circleMarker(
+                [13.0337069, 80.2122522],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 27.5, "stroke": true, "weight": 3}
+            ).addTo(map_fd24cb62d7c471137ba06c844641b090);
+        
+    
+        var popup_a7b02977b4f2800a14878ef3c1c1c4d3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_132828b2037914feff7e6910a4f2071b = $(`<div id="html_132828b2037914feff7e6910a4f2071b" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif;">             <h4 style="margin: 0 0 10px 0;">BHARAT SCANS</h4>             <p><b>Attraction Density:</b> 18</p>             <p><i>Number of nearby attractions within 5km radius</i></p>         </div>         </div>`)[0];
+                popup_a7b02977b4f2800a14878ef3c1c1c4d3.setContent(html_132828b2037914feff7e6910a4f2071b);
+            
+        
+
+        circle_marker_55de4606dc72c36252fdde6fe2d1f850.bindPopup(popup_a7b02977b4f2800a14878ef3c1c1c4d3)
+        ;
+
+        
+    
+    
+            circle_marker_55de4606dc72c36252fdde6fe2d1f850.bindTooltip(
+                `<div>
+                     BHARAT SCANS: Density 18
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6c9e91041f0de561ae808a8378737f18 = L.circleMarker(
+                [13.0064804, 80.2391664],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.75, "stroke": true, "weight": 3}
+            ).addTo(map_fd24cb62d7c471137ba06c844641b090);
+        
+    
+        var popup_67d526136a52234c1d41b802b5f80bf1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_92097607f5c7630dd71c24a72868fc9a = $(`<div id="html_92097607f5c7630dd71c24a72868fc9a" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif;">             <h4 style="margin: 0 0 10px 0;">Rajaji Memorial</h4>             <p><b>Attraction Density:</b> 15</p>             <p><i>Number of nearby attractions within 5km radius</i></p>         </div>         </div>`)[0];
+                popup_67d526136a52234c1d41b802b5f80bf1.setContent(html_92097607f5c7630dd71c24a72868fc9a);
+            
+        
+
+        circle_marker_6c9e91041f0de561ae808a8378737f18.bindPopup(popup_67d526136a52234c1d41b802b5f80bf1)
+        ;
+
+        
+    
+    
+            circle_marker_6c9e91041f0de561ae808a8378737f18.bindTooltip(
+                `<div>
+                     Rajaji Memorial: Density 15
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1c4a9c36955245580162d8b57b54a549 = L.circleMarker(
+                [13.0119591, 80.2440161],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.75, "stroke": true, "weight": 3}
+            ).addTo(map_fd24cb62d7c471137ba06c844641b090);
+        
+    
+        var popup_998e81cf1944eb27809e2734222cd3b4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cbff86062034b8686834d1af42f8c015 = $(`<div id="html_cbff86062034b8686834d1af42f8c015" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif;">             <h4 style="margin: 0 0 10px 0;">Birla Planetarium</h4>             <p><b>Attraction Density:</b> 15</p>             <p><i>Number of nearby attractions within 5km radius</i></p>         </div>         </div>`)[0];
+                popup_998e81cf1944eb27809e2734222cd3b4.setContent(html_cbff86062034b8686834d1af42f8c015);
+            
+        
+
+        circle_marker_1c4a9c36955245580162d8b57b54a549.bindPopup(popup_998e81cf1944eb27809e2734222cd3b4)
+        ;
+
+        
+    
+    
+            circle_marker_1c4a9c36955245580162d8b57b54a549.bindTooltip(
+                `<div>
+                     Birla Planetarium: Density 15
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_df2cf106553354a3bc75a39b32414b00 = L.circleMarker(
+                [13.0067142, 80.2362341],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.5, "stroke": true, "weight": 3}
+            ).addTo(map_fd24cb62d7c471137ba06c844641b090);
+        
+    
+        var popup_feea1de552fbf3364268f64494a934b1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c389e79b4a566478d22cd4a96df2ae6f = $(`<div id="html_c389e79b4a566478d22cd4a96df2ae6f" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif;">             <h4 style="margin: 0 0 10px 0;">Bakthavachalam Memorial</h4>             <p><b>Attraction Density:</b> 14</p>             <p><i>Number of nearby attractions within 5km radius</i></p>         </div>         </div>`)[0];
+                popup_feea1de552fbf3364268f64494a934b1.setContent(html_c389e79b4a566478d22cd4a96df2ae6f);
+            
+        
+
+        circle_marker_df2cf106553354a3bc75a39b32414b00.bindPopup(popup_feea1de552fbf3364268f64494a934b1)
+        ;
+
+        
+    
+    
+            circle_marker_df2cf106553354a3bc75a39b32414b00.bindTooltip(
+                `<div>
+                     Bakthavachalam Memorial: Density 14
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8578374f72dd1226672d6e0feef04a20 = L.circleMarker(
+                [13.006922, 80.2355846],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.5, "stroke": true, "weight": 3}
+            ).addTo(map_fd24cb62d7c471137ba06c844641b090);
+        
+    
+        var popup_3e53f27de5acfd408e2abbee71e0c202 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6cf515d35e897e18a99e2162e2829cce = $(`<div id="html_6cf515d35e897e18a99e2162e2829cce" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif;">             <h4 style="margin: 0 0 10px 0;">Kamaraj Memorial</h4>             <p><b>Attraction Density:</b> 14</p>             <p><i>Number of nearby attractions within 5km radius</i></p>         </div>         </div>`)[0];
+                popup_3e53f27de5acfd408e2abbee71e0c202.setContent(html_6cf515d35e897e18a99e2162e2829cce);
+            
+        
+
+        circle_marker_8578374f72dd1226672d6e0feef04a20.bindPopup(popup_3e53f27de5acfd408e2abbee71e0c202)
+        ;
+
+        
+    
+    
+            circle_marker_8578374f72dd1226672d6e0feef04a20.bindTooltip(
+                `<div>
+                     Kamaraj Memorial: Density 14
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4a1f2849d11e514345b6b71abe40a320 = L.circleMarker(
+                [13.0032701, 80.2384929],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.25, "stroke": true, "weight": 3}
+            ).addTo(map_fd24cb62d7c471137ba06c844641b090);
+        
+    
+        var popup_6895305f69662379aaa1726831981f58 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ffd8ac8aa573b84f8416e799549a0b5c = $(`<div id="html_ffd8ac8aa573b84f8416e799549a0b5c" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif;">             <h4 style="margin: 0 0 10px 0;">Snake Park</h4>             <p><b>Attraction Density:</b> 13</p>             <p><i>Number of nearby attractions within 5km radius</i></p>         </div>         </div>`)[0];
+                popup_6895305f69662379aaa1726831981f58.setContent(html_ffd8ac8aa573b84f8416e799549a0b5c);
+            
+        
+
+        circle_marker_4a1f2849d11e514345b6b71abe40a320.bindPopup(popup_6895305f69662379aaa1726831981f58)
+        ;
+
+        
+    
+    
+            circle_marker_4a1f2849d11e514345b6b71abe40a320.bindTooltip(
+                `<div>
+                     Snake Park: Density 13
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8e40d57166c1095316ddeef9fd15c799 = L.circleMarker(
+                [13.0158394, 80.2628474],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.25, "stroke": true, "weight": 3}
+            ).addTo(map_fd24cb62d7c471137ba06c844641b090);
+        
+    
+        var popup_674c75fdd5adf5eadcfb2ac3324e188d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_df613f6cc4ef95b0517aee1d9139fa5b = $(`<div id="html_df613f6cc4ef95b0517aee1d9139fa5b" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif;">             <h4 style="margin: 0 0 10px 0;">Brodie Castle</h4>             <p><b>Attraction Density:</b> 13</p>             <p><i>Number of nearby attractions within 5km radius</i></p>         </div>         </div>`)[0];
+                popup_674c75fdd5adf5eadcfb2ac3324e188d.setContent(html_df613f6cc4ef95b0517aee1d9139fa5b);
+            
+        
+
+        circle_marker_8e40d57166c1095316ddeef9fd15c799.bindPopup(popup_674c75fdd5adf5eadcfb2ac3324e188d)
+        ;
+
+        
+    
+    
+            circle_marker_8e40d57166c1095316ddeef9fd15c799.bindTooltip(
+                `<div>
+                     Brodie Castle: Density 13
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_05c92d7a48d5d4085906838aa5a0fcff = L.circleMarker(
+                [13.0497991, 80.2426022],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.25, "stroke": true, "weight": 3}
+            ).addTo(map_fd24cb62d7c471137ba06c844641b090);
+        
+    
+        var popup_ec908dd6096e599fee7df3781f1f9708 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2d4bf725e4116f428b5be52c39120180 = $(`<div id="html_2d4bf725e4116f428b5be52c39120180" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif;">             <h4 style="margin: 0 0 10px 0;">None</h4>             <p><b>Attraction Density:</b> 13</p>             <p><i>Number of nearby attractions within 5km radius</i></p>         </div>         </div>`)[0];
+                popup_ec908dd6096e599fee7df3781f1f9708.setContent(html_2d4bf725e4116f428b5be52c39120180);
+            
+        
+
+        circle_marker_05c92d7a48d5d4085906838aa5a0fcff.bindPopup(popup_ec908dd6096e599fee7df3781f1f9708)
+        ;
+
+        
+    
+    
+            circle_marker_05c92d7a48d5d4085906838aa5a0fcff.bindTooltip(
+                `<div>
+                     None: Density 13
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_576ea61d62601cc2caabea5aa8181fb0 = L.circleMarker(
+                [13.0229114, 80.1850132],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.0, "stroke": true, "weight": 3}
+            ).addTo(map_fd24cb62d7c471137ba06c844641b090);
+        
+    
+        var popup_49390b7fd8c6b5affa6cae7435267437 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e01eac5348bcb32722345d2e5e6e0e3c = $(`<div id="html_e01eac5348bcb32722345d2e5e6e0e3c" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif;">             <h4 style="margin: 0 0 10px 0;">s.sriram</h4>             <p><b>Attraction Density:</b> 12</p>             <p><i>Number of nearby attractions within 5km radius</i></p>         </div>         </div>`)[0];
+                popup_49390b7fd8c6b5affa6cae7435267437.setContent(html_e01eac5348bcb32722345d2e5e6e0e3c);
+            
+        
+
+        circle_marker_576ea61d62601cc2caabea5aa8181fb0.bindPopup(popup_49390b7fd8c6b5affa6cae7435267437)
+        ;
+
+        
+    
+    
+            circle_marker_576ea61d62601cc2caabea5aa8181fb0.bindTooltip(
+                `<div>
+                     s.sriram: Density 12
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_65e8c22ba8f50fefa7397431763e3133 = L.circleMarker(
+                [13.0254529, 80.183303],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.0, "stroke": true, "weight": 3}
+            ).addTo(map_fd24cb62d7c471137ba06c844641b090);
+        
+    
+        var popup_ba342ff8154b8c2c32d0ed7e92385941 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_87a0f586d8dda9a366e3f1212cda16ac = $(`<div id="html_87a0f586d8dda9a366e3f1212cda16ac" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif;">             <h4 style="margin: 0 0 10px 0;">Home Finders Estate</h4>             <p><b>Attraction Density:</b> 12</p>             <p><i>Number of nearby attractions within 5km radius</i></p>         </div>         </div>`)[0];
+                popup_ba342ff8154b8c2c32d0ed7e92385941.setContent(html_87a0f586d8dda9a366e3f1212cda16ac);
+            
+        
+
+        circle_marker_65e8c22ba8f50fefa7397431763e3133.bindPopup(popup_ba342ff8154b8c2c32d0ed7e92385941)
+        ;
+
+        
+    
+    
+            circle_marker_65e8c22ba8f50fefa7397431763e3133.bindTooltip(
+                `<div>
+                     Home Finders Estate: Density 12
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a1e395d40c3ca956468c70f3868b611a = L.circleMarker(
+                [13.0193208, 80.266984],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.75, "stroke": true, "weight": 3}
+            ).addTo(map_fd24cb62d7c471137ba06c844641b090);
+        
+    
+        var popup_6e84000dbaefaed7e3b05b83f8c71fe3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2b3caeda2db9055ff439c7e191f3b728 = $(`<div id="html_2b3caeda2db9055ff439c7e191f3b728" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif;">             <h4 style="margin: 0 0 10px 0;">Ambedkar Memorial</h4>             <p><b>Attraction Density:</b> 11</p>             <p><i>Number of nearby attractions within 5km radius</i></p>         </div>         </div>`)[0];
+                popup_6e84000dbaefaed7e3b05b83f8c71fe3.setContent(html_2b3caeda2db9055ff439c7e191f3b728);
+            
+        
+
+        circle_marker_a1e395d40c3ca956468c70f3868b611a.bindPopup(popup_6e84000dbaefaed7e3b05b83f8c71fe3)
+        ;
+
+        
+    
+    
+            circle_marker_a1e395d40c3ca956468c70f3868b611a.bindTooltip(
+                `<div>
+                     Ambedkar Memorial: Density 11
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d6e7e7cbbf674d2ecb4baf4a15b810b0 = L.circleMarker(
+                [13.0298561, 80.2135171],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.75, "stroke": true, "weight": 3}
+            ).addTo(map_fd24cb62d7c471137ba06c844641b090);
+        
+    
+        var popup_2396a96b4c74f05681df9e08b73f3592 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_57b6bb1e86caeb353caecc4a3dd351ae = $(`<div id="html_57b6bb1e86caeb353caecc4a3dd351ae" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif;">             <h4 style="margin: 0 0 10px 0;">None</h4>             <p><b>Attraction Density:</b> 11</p>             <p><i>Number of nearby attractions within 5km radius</i></p>         </div>         </div>`)[0];
+                popup_2396a96b4c74f05681df9e08b73f3592.setContent(html_57b6bb1e86caeb353caecc4a3dd351ae);
+            
+        
+
+        circle_marker_d6e7e7cbbf674d2ecb4baf4a15b810b0.bindPopup(popup_2396a96b4c74f05681df9e08b73f3592)
+        ;
+
+        
+    
+    
+            circle_marker_d6e7e7cbbf674d2ecb4baf4a15b810b0.bindTooltip(
+                `<div>
+                     None: Density 11
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5c35f4cf7f472cb6966b8b5d1a83b85a = L.circleMarker(
+                [12.9935576, 80.2470596],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.25, "stroke": true, "weight": 3}
+            ).addTo(map_fd24cb62d7c471137ba06c844641b090);
+        
+    
+        var popup_d7ff3773ca6ca886b5fd44041027736c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ff6ce19cc04b9c7e2ea8b1de9dce56bb = $(`<div id="html_ff6ce19cc04b9c7e2ea8b1de9dce56bb" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif;">             <h4 style="margin: 0 0 10px 0;">None</h4>             <p><b>Attraction Density:</b> 9</p>             <p><i>Number of nearby attractions within 5km radius</i></p>         </div>         </div>`)[0];
+                popup_d7ff3773ca6ca886b5fd44041027736c.setContent(html_ff6ce19cc04b9c7e2ea8b1de9dce56bb);
+            
+        
+
+        circle_marker_5c35f4cf7f472cb6966b8b5d1a83b85a.bindPopup(popup_d7ff3773ca6ca886b5fd44041027736c)
+        ;
+
+        
+    
+    
+            circle_marker_5c35f4cf7f472cb6966b8b5d1a83b85a.bindTooltip(
+                `<div>
+                     None: Density 9
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_724c9e19c4b0b2330984b7a823a915fe = L.circleMarker(
+                [13.0347941, 80.273749],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.0, "stroke": true, "weight": 3}
+            ).addTo(map_fd24cb62d7c471137ba06c844641b090);
+        
+    
+        var popup_42fc333bd758892fe4d3f64d748ad90b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_16a7bf0175d463baca91b660cc62ec73 = $(`<div id="html_16a7bf0175d463baca91b660cc62ec73" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif;">             <h4 style="margin: 0 0 10px 0;">அக்பர் மருந்து மில்</h4>             <p><b>Attraction Density:</b> 8</p>             <p><i>Number of nearby attractions within 5km radius</i></p>         </div>         </div>`)[0];
+                popup_42fc333bd758892fe4d3f64d748ad90b.setContent(html_16a7bf0175d463baca91b660cc62ec73);
+            
+        
+
+        circle_marker_724c9e19c4b0b2330984b7a823a915fe.bindPopup(popup_42fc333bd758892fe4d3f64d748ad90b)
+        ;
+
+        
+    
+    
+            circle_marker_724c9e19c4b0b2330984b7a823a915fe.bindTooltip(
+                `<div>
+                     அக்பர் மருந்து மில்: Density 8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7b65aeb0104658c08586a74bc0cb6d76 = L.circleMarker(
+                [80.2512638, 80.2512638],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.0, "stroke": true, "weight": 3}
+            ).addTo(map_fd24cb62d7c471137ba06c844641b090);
+        
+    
+        var popup_5c111740c6d41c2e4223f70d38f15674 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_eb23d07a860b529e5b66f33274567b6c = $(`<div id="html_eb23d07a860b529e5b66f33274567b6c" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif;">             <h4 style="margin: 0 0 10px 0;">Senmozhi Poonga</h4>             <p><b>Attraction Density:</b> 8</p>             <p><i>Number of nearby attractions within 5km radius</i></p>         </div>         </div>`)[0];
+                popup_5c111740c6d41c2e4223f70d38f15674.setContent(html_eb23d07a860b529e5b66f33274567b6c);
+            
+        
+
+        circle_marker_7b65aeb0104658c08586a74bc0cb6d76.bindPopup(popup_5c111740c6d41c2e4223f70d38f15674)
+        ;
+
+        
+    
+    
+            circle_marker_7b65aeb0104658c08586a74bc0cb6d76.bindTooltip(
+                `<div>
+                     Senmozhi Poonga: Density 8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9e6a66add0979f986959a322cc2650c8 = L.circleMarker(
+                [80.2449841, 80.2449841],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.0, "stroke": true, "weight": 3}
+            ).addTo(map_fd24cb62d7c471137ba06c844641b090);
+        
+    
+        var popup_9e2b5ddf164103b1d3873b381ea3d850 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6ef84a43e86ef03584ef5c4a4f360b66 = $(`<div id="html_6ef84a43e86ef03584ef5c4a4f360b66" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif;">             <h4 style="margin: 0 0 10px 0;">Periyar Science and Technology Centre</h4>             <p><b>Attraction Density:</b> 8</p>             <p><i>Number of nearby attractions within 5km radius</i></p>         </div>         </div>`)[0];
+                popup_9e2b5ddf164103b1d3873b381ea3d850.setContent(html_6ef84a43e86ef03584ef5c4a4f360b66);
+            
+        
+
+        circle_marker_9e6a66add0979f986959a322cc2650c8.bindPopup(popup_9e2b5ddf164103b1d3873b381ea3d850)
+        ;
+
+        
+    
+    
+            circle_marker_9e6a66add0979f986959a322cc2650c8.bindTooltip(
+                `<div>
+                     Periyar Science and Technology Centre: Density 8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_77366f8b48562b2056ff562e97abf25f = L.circleMarker(
+                [80.2456491, 80.2456491],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.0, "stroke": true, "weight": 3}
+            ).addTo(map_fd24cb62d7c471137ba06c844641b090);
+        
+    
+        var popup_1f7c41ef426e3355b3610d193b43853b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_dd6c94e56d0d05c5d674d6227a8c3013 = $(`<div id="html_dd6c94e56d0d05c5d674d6227a8c3013" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif;">             <h4 style="margin: 0 0 10px 0;">Kart Attack Go Karting</h4>             <p><b>Attraction Density:</b> 8</p>             <p><i>Number of nearby attractions within 5km radius</i></p>         </div>         </div>`)[0];
+                popup_1f7c41ef426e3355b3610d193b43853b.setContent(html_dd6c94e56d0d05c5d674d6227a8c3013);
+            
+        
+
+        circle_marker_77366f8b48562b2056ff562e97abf25f.bindPopup(popup_1f7c41ef426e3355b3610d193b43853b)
+        ;
+
+        
+    
+    
+            circle_marker_77366f8b48562b2056ff562e97abf25f.bindTooltip(
+                `<div>
+                     Kart Attack Go Karting: Density 8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

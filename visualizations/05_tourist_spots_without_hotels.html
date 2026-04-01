@@ -1,0 +1,1620 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7a0c94515b22223b1ac359a48fd34048 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_7a0c94515b22223b1ac359a48fd34048" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_7a0c94515b22223b1ac359a48fd34048 = L.map(
+                "map_7a0c94515b22223b1ac359a48fd34048",
+                {
+                    center: [11.1271, 78.6569],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_7a0c94515b22223b1ac359a48fd34048);
+
+            
+
+        
+    
+            var tile_layer_47a38b90222356fa656dad299ac3ecc0 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_47a38b90222356fa656dad299ac3ecc0.addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+            var circle_marker_ccc338d8b3741e2b2e3a87c76e0c0c8a = L.circleMarker(
+                [13.2341687, 80.3319749],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_fc97be9bd1355cb0426c2413b4111010 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6d979247593a49b66248ff96b4a0d26d = $(`<div id="html_6d979247593a49b66248ff96b4a0d26d" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Thalankuppam Abandoned Pier</h4><br><b>tourism:</b> attraction</div>`)[0];
+                popup_fc97be9bd1355cb0426c2413b4111010.setContent(html_6d979247593a49b66248ff96b4a0d26d);
+            
+        
+
+        circle_marker_ccc338d8b3741e2b2e3a87c76e0c0c8a.bindPopup(popup_fc97be9bd1355cb0426c2413b4111010)
+        ;
+
+        
+    
+    
+            circle_marker_ccc338d8b3741e2b2e3a87c76e0c0c8a.bindTooltip(
+                `<div>
+                     Thalankuppam Abandoned Pier
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_33a21db78bed8b4dfadcc5f420ea5bca = L.circleMarker(
+                [13.0028894, 80.2392678],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_cb3ea8ff964c4580ec702c9ab5113c18 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0803d83d597f3d96f155fa116b98e467 = $(`<div id="html_0803d83d597f3d96f155fa116b98e467" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Guindy National Park</h4><br><b>name:en:</b> Guindy National Park<br><b>tourism:</b> attraction<br><b>wikidata:</b> Q648548<br><b>wikipedia:</b> en:Guindy National Park<br><b>name:ta:</b> கிண்டி தேசிய பூங்கா<br><b>wikimedia_commons:</b> Category:Guindy National Park<br><b>boundary:</b> national_park<br><b>name:ml:</b> ഗിണ്ടി ദേശിയ ഉദ്യാനം<br><b>natural:</b> wood<br><b>protect_class:</b> 2</div>`)[0];
+                popup_cb3ea8ff964c4580ec702c9ab5113c18.setContent(html_0803d83d597f3d96f155fa116b98e467);
+            
+        
+
+        circle_marker_33a21db78bed8b4dfadcc5f420ea5bca.bindPopup(popup_cb3ea8ff964c4580ec702c9ab5113c18)
+        ;
+
+        
+    
+    
+            circle_marker_33a21db78bed8b4dfadcc5f420ea5bca.bindTooltip(
+                `<div>
+                     Guindy National Park
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6b3c7b7b78d766071935039ce2f94ded = L.circleMarker(
+                [13.0518131, 80.2512638],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_89bc334f508f23d6c32947c0c27076cf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fcdb588ae106edb4e2467833dcb2e52c = $(`<div id="html_fcdb588ae106edb4e2467833dcb2e52c" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Senmozhi Poonga</h4><br><b>name:en:</b> Semmozhi Poonga<br><b>tourism:</b> attraction<br><b>wikidata:</b> Q12068695<br><b>wikipedia:</b> en:Semmoli Poonga<br><b>name:ta:</b> செம்மொழி பூங்கா<br><b>wikimedia_commons:</b> Category:Semmozhi Poonga<br><b>addr:street:</b> Cathedral Road<br><b>addr:postcode:</b> 600086<br><b>addr:city:</b> Chennai<br><b>addr:unit:</b> Teynampet<br><b>description:</b> One of the largest parks in Chennai.<br><b>leisure:</b> park</div>`)[0];
+                popup_89bc334f508f23d6c32947c0c27076cf.setContent(html_fcdb588ae106edb4e2467833dcb2e52c);
+            
+        
+
+        circle_marker_6b3c7b7b78d766071935039ce2f94ded.bindPopup(popup_89bc334f508f23d6c32947c0c27076cf)
+        ;
+
+        
+    
+    
+            circle_marker_6b3c7b7b78d766071935039ce2f94ded.bindTooltip(
+                `<div>
+                     Senmozhi Poonga
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_914263ee017681a855bbc9950251561f = L.circleMarker(
+                [13.0120407, 80.1885953],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_80baa36f4e0f3972e5bb17e7db42d808 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_21e4dbecaadff128fa556c10cca8698d = $(`<div id="html_21e4dbecaadff128fa556c10cca8698d" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Chennai Trade Center</h4><br><b>name:en:</b> Chennai Trade Center<br><b>tourism:</b> attraction<br><b>wikidata:</b> Q5091469<br><b>wikipedia:</b> en:Chennai Trade Centre<br><b>name:ta:</b> சென்னை வர்த்தக மையம்<br><b>wikimedia_commons:</b> Category:Chennai Trade Centre<br><b>alt_name:</b> Chennai Trade Centre<br><b>landuse:</b> commercial</div>`)[0];
+                popup_80baa36f4e0f3972e5bb17e7db42d808.setContent(html_21e4dbecaadff128fa556c10cca8698d);
+            
+        
+
+        circle_marker_914263ee017681a855bbc9950251561f.bindPopup(popup_80baa36f4e0f3972e5bb17e7db42d808)
+        ;
+
+        
+    
+    
+            circle_marker_914263ee017681a855bbc9950251561f.bindTooltip(
+                `<div>
+                     Chennai Trade Center
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_95c83a8814dad2a314202cc906a7d075 = L.circleMarker(
+                [13.0114429, 80.2449841],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_c50c3b1fba510a50943cf0a3a3403a7d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bd68d0e4fd03bcfe632239a2aea5ad22 = $(`<div id="html_bd68d0e4fd03bcfe632239a2aea5ad22" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Periyar Science and Technology Centre</h4><br><b>tourism:</b> attraction</div>`)[0];
+                popup_c50c3b1fba510a50943cf0a3a3403a7d.setContent(html_bd68d0e4fd03bcfe632239a2aea5ad22);
+            
+        
+
+        circle_marker_95c83a8814dad2a314202cc906a7d075.bindPopup(popup_c50c3b1fba510a50943cf0a3a3403a7d)
+        ;
+
+        
+    
+    
+            circle_marker_95c83a8814dad2a314202cc906a7d075.bindTooltip(
+                `<div>
+                     Periyar Science and Technology Centre
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fd79b86b3401dd2e79a66411f1c5c066 = L.circleMarker(
+                [12.8955822, 80.2456491],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_29f9f73e677006971ed5698babb4a8ac = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6241873d732c86c4a31cbb4078d750ef = $(`<div id="html_6241873d732c86c4a31cbb4078d750ef" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Kart Attack Go Karting</h4><br><b>tourism:</b> attraction</div>`)[0];
+                popup_29f9f73e677006971ed5698babb4a8ac.setContent(html_6241873d732c86c4a31cbb4078d750ef);
+            
+        
+
+        circle_marker_fd79b86b3401dd2e79a66411f1c5c066.bindPopup(popup_29f9f73e677006971ed5698babb4a8ac)
+        ;
+
+        
+    
+    
+            circle_marker_fd79b86b3401dd2e79a66411f1c5c066.bindTooltip(
+                `<div>
+                     Kart Attack Go Karting
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5cfe75612535a3aa3dab3a7603d85c39 = L.circleMarker(
+                [13.0526769, 80.2412484],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_23959d3df8f977c4622a529b397c65e4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_369d1c243463715e05de56036eba53c3 = $(`<div id="html_369d1c243463715e05de56036eba53c3" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Valluvar Kottam</h4><br><b>tourism:</b> attraction<br><b>wikidata:</b> Q2509435<br><b>wikipedia:</b> en:Valluvar Kottam<br><b>name:ta:</b> வள்ளுவர் கோட்டம்<br><b>wikimedia_commons:</b> Category:Valluvar Kottam</div>`)[0];
+                popup_23959d3df8f977c4622a529b397c65e4.setContent(html_369d1c243463715e05de56036eba53c3);
+            
+        
+
+        circle_marker_5cfe75612535a3aa3dab3a7603d85c39.bindPopup(popup_23959d3df8f977c4622a529b397c65e4)
+        ;
+
+        
+    
+    
+            circle_marker_5cfe75612535a3aa3dab3a7603d85c39.bindTooltip(
+                `<div>
+                     Valluvar Kottam
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6c89f2d96e0a02ee9fc0114c3ea0f2fb = L.circleMarker(
+                [13.0489482, 80.2804717],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_ac7b63be4eec9576a6eb33e67b780e18 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_923fac0616ef9e1de92754f6e8376949 = $(`<div id="html_923fac0616ef9e1de92754f6e8376949" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Vivekanandar Illam</h4><br><b>tourism:</b> attraction<br><b>wikidata:</b> Q3350092<br><b>wikipedia:</b> en:Vivekanandar Illam<br><b>wikimedia_commons:</b> Category:Vivekanandar Illam<br><b>area:</b> yes</div>`)[0];
+                popup_ac7b63be4eec9576a6eb33e67b780e18.setContent(html_923fac0616ef9e1de92754f6e8376949);
+            
+        
+
+        circle_marker_6c89f2d96e0a02ee9fc0114c3ea0f2fb.bindPopup(popup_ac7b63be4eec9576a6eb33e67b780e18)
+        ;
+
+        
+    
+    
+            circle_marker_6c89f2d96e0a02ee9fc0114c3ea0f2fb.bindTooltip(
+                `<div>
+                     Vivekanandar Illam
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_037664c96cd2ba71a1e6c9469f8c3224 = L.circleMarker(
+                [13.0474922, 80.2397686],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_2c22f3574b2b99e586f106452ae3fdc8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a0ca00d467a7e8c5b1fa4fa31fbe5289 = $(`<div id="html_a0ca00d467a7e8c5b1fa4fa31fbe5289" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Kamaraj Memorial House</h4><br><b>tourism:</b> attraction</div>`)[0];
+                popup_2c22f3574b2b99e586f106452ae3fdc8.setContent(html_a0ca00d467a7e8c5b1fa4fa31fbe5289);
+            
+        
+
+        circle_marker_037664c96cd2ba71a1e6c9469f8c3224.bindPopup(popup_2c22f3574b2b99e586f106452ae3fdc8)
+        ;
+
+        
+    
+    
+            circle_marker_037664c96cd2ba71a1e6c9469f8c3224.bindTooltip(
+                `<div>
+                     Kamaraj Memorial House
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_99c7b5c979ee3ff89166e775cae10849 = L.circleMarker(
+                [13.0607103, 80.2605424],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_8b2c96e793bbfa9ad8ccd3b151fe06f2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c6c52854f75e2dcd5f678086334685fe = $(`<div id="html_c6c52854f75e2dcd5f678086334685fe" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Victoria Technical Institute</h4><br><b>name:en:</b> Victoria Technical Institute<br><b>tourism:</b> attraction<br><b>name:ta:</b> விக்டோரியா தொழில்நுட்ப நிறுவனம்<br><b>addr:street:</b> Anna Salai (Mount Road)<br><b>addr:postcode:</b> 600002<br><b>addr:city:</b> Chennai<br><b>addr:housenumber:</b> 180<br><b>phone:</b> 04428523153<br><b>website:</b> https://www.vtichennai.com/<br><b>building:</b> yes<br><b>building:levels:</b> 3<br><b>check_date:</b> 2025-06-05<br><b>craft:</b> handicraft</div>`)[0];
+                popup_8b2c96e793bbfa9ad8ccd3b151fe06f2.setContent(html_c6c52854f75e2dcd5f678086334685fe);
+            
+        
+
+        circle_marker_99c7b5c979ee3ff89166e775cae10849.bindPopup(popup_8b2c96e793bbfa9ad8ccd3b151fe06f2)
+        ;
+
+        
+    
+    
+            circle_marker_99c7b5c979ee3ff89166e775cae10849.bindTooltip(
+                `<div>
+                     Victoria Technical Institute
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2cbfad1e59051c41e89616242429314e = L.circleMarker(
+                [13.0747231, 80.2853262],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_0fa66614435c6b04c4923c2a7b292e02 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_07e6b147a73a51b2ea607f08dca11050 = $(`<div id="html_07e6b147a73a51b2ea607f08dca11050" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Fort St. George</h4><br><b>tourism:</b> attraction<br><b>wikidata:</b> Q1438739<br><b>wikipedia:</b> en:Fort St. George, India<br><b>name:ta:</b> புனித ஜார்ஜ் கோட்டை<br><b>addr:street:</b> Rajaji Salai<br><b>addr:postcode:</b> 600009<br><b>addr:city:</b> Chennai<br><b>name:ml:</b> സെന്റ് ജോർജ്ജ് കോട്ട<br><b>description:</b> The first British fortress built in India, established in 1644, with a museum & 17th-century church.<br><b>landuse:</b> military<br><b>historic:</b> castle<br><b>military:</b> base<br><b>name:hi:</b> सेंट जॉर्ज फोर्ट<br><b>old_name:</b> White Town</div>`)[0];
+                popup_0fa66614435c6b04c4923c2a7b292e02.setContent(html_07e6b147a73a51b2ea607f08dca11050);
+            
+        
+
+        circle_marker_2cbfad1e59051c41e89616242429314e.bindPopup(popup_0fa66614435c6b04c4923c2a7b292e02)
+        ;
+
+        
+    
+    
+            circle_marker_2cbfad1e59051c41e89616242429314e.bindTooltip(
+                `<div>
+                     Fort St. George
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2b8eccb6c59d9956f8eea6574f1c4a68 = L.circleMarker(
+                [10.2530396, 76.9350701],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_e5e311b9cf911e34cab04578504e143b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cc6119d6fc8281a067e2e0da6de0fec6 = $(`<div id="html_cc6119d6fc8281a067e2e0da6de0fec6" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Nallamudi Poonjolai</h4><br><b>tourism:</b> attraction</div>`)[0];
+                popup_e5e311b9cf911e34cab04578504e143b.setContent(html_cc6119d6fc8281a067e2e0da6de0fec6);
+            
+        
+
+        circle_marker_2b8eccb6c59d9956f8eea6574f1c4a68.bindPopup(popup_e5e311b9cf911e34cab04578504e143b)
+        ;
+
+        
+    
+    
+            circle_marker_2b8eccb6c59d9956f8eea6574f1c4a68.bindTooltip(
+                `<div>
+                     Nallamudi Poonjolai
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b5d0e94702c2607c4dde9e7da6d634b5 = L.circleMarker(
+                [11.0607736, 77.1119484],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_8878a50e4b57c8b79f5f19d24fddc1a1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_60f15980f3c44d1f3f52a985fa1cc87b = $(`<div id="html_60f15980f3c44d1f3f52a985fa1cc87b" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Unnamed Location</h4><br><b>name:en:</b> Lakshmi Ring Travellers Coimbatore Limited<br><b>tourism:</b> attraction</div>`)[0];
+                popup_8878a50e4b57c8b79f5f19d24fddc1a1.setContent(html_60f15980f3c44d1f3f52a985fa1cc87b);
+            
+        
+
+        circle_marker_b5d0e94702c2607c4dde9e7da6d634b5.bindPopup(popup_8878a50e4b57c8b79f5f19d24fddc1a1)
+        ;
+
+        
+    
+    
+            circle_marker_b5d0e94702c2607c4dde9e7da6d634b5.bindTooltip(
+                `<div>
+                     Unnamed Location
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_59758c0faf4ef019353ed18df3849f2e = L.circleMarker(
+                [10.2988908, 76.8803262],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_29ed3a3c84ba861d2685c16041e9548c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6ef255d487ade90e521ed131af3757a4 = $(`<div id="html_6ef255d487ade90e521ed131af3757a4" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>சோலையாறு அணை - ഷോളയാർ അണക്കെട്ട്</h4><br><b>name:en:</b> Sholayar Dam<br><b>tourism:</b> attraction</div>`)[0];
+                popup_29ed3a3c84ba861d2685c16041e9548c.setContent(html_6ef255d487ade90e521ed131af3757a4);
+            
+        
+
+        circle_marker_59758c0faf4ef019353ed18df3849f2e.bindPopup(popup_29ed3a3c84ba861d2685c16041e9548c)
+        ;
+
+        
+    
+    
+            circle_marker_59758c0faf4ef019353ed18df3849f2e.bindTooltip(
+                `<div>
+                     சோலையாறு அணை - ഷോളയാർ അണക്കെട്ട്
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4c0db61447aaaa12fd59e95c2c817acb = L.circleMarker(
+                [10.4492319, 76.9843582],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_d0e6753e6d2834346faf0c2f3f91f1b1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_20f774cf80f106eb00d9422083427575 = $(`<div id="html_20f774cf80f106eb00d9422083427575" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Unnamed Location</h4><br><b>tourism:</b> attraction</div>`)[0];
+                popup_d0e6753e6d2834346faf0c2f3f91f1b1.setContent(html_20f774cf80f106eb00d9422083427575);
+            
+        
+
+        circle_marker_4c0db61447aaaa12fd59e95c2c817acb.bindPopup(popup_d0e6753e6d2834346faf0c2f3f91f1b1)
+        ;
+
+        
+    
+    
+            circle_marker_4c0db61447aaaa12fd59e95c2c817acb.bindTooltip(
+                `<div>
+                     Unnamed Location
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5ddfc79593536f874d198c5a17effa98 = L.circleMarker(
+                [11.0230323, 76.9132876],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_70d8ee212cc38bb2f40ea527855f5891 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4788be331ea859a1cc5f5de1c4ba5b25 = $(`<div id="html_4788be331ea859a1cc5f5de1c4ba5b25" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Shivanjali Art Institute</h4><br><b>tourism:</b> attraction<br><b>building:</b> yes</div>`)[0];
+                popup_70d8ee212cc38bb2f40ea527855f5891.setContent(html_4788be331ea859a1cc5f5de1c4ba5b25);
+            
+        
+
+        circle_marker_5ddfc79593536f874d198c5a17effa98.bindPopup(popup_70d8ee212cc38bb2f40ea527855f5891)
+        ;
+
+        
+    
+    
+            circle_marker_5ddfc79593536f874d198c5a17effa98.bindTooltip(
+                `<div>
+                     Shivanjali Art Institute
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c11d683b6872f2bce1c561fd1dda8641 = L.circleMarker(
+                [76.8615072, 76.8616841],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_575dbf8855a5d2b0873a5b787c7fea5d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9877867f43e0fa871ffdb2e75b901bec = $(`<div id="html_9877867f43e0fa871ffdb2e75b901bec" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Walayar Dam</h4><br><b>tourism:</b> attraction<br><b>wikidata:</b> Q7961298<br><b>wikipedia:</b> en:Walayar Dam<br><b>name:ta:</b> வாளையார் அணை<br><b>name:ml:</b> വാളയാർ അണക്കെട്ട്<br><b>name:hi:</b> वालयार बाँध<br><b>height:</b> 20<br><b>operator:</b> Government of Kerala<br><b>waterway:</b> dam</div>`)[0];
+                popup_575dbf8855a5d2b0873a5b787c7fea5d.setContent(html_9877867f43e0fa871ffdb2e75b901bec);
+            
+        
+
+        circle_marker_c11d683b6872f2bce1c561fd1dda8641.bindPopup(popup_575dbf8855a5d2b0873a5b787c7fea5d)
+        ;
+
+        
+    
+    
+            circle_marker_c11d683b6872f2bce1c561fd1dda8641.bindTooltip(
+                `<div>
+                     Walayar Dam
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5b316f41839eae49ba1aa434a9c2821a = L.circleMarker(
+                [10.9940076, 76.9629568],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_5a52c8980982bb58ade8a03792cce797 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_df64cc15f1a0d4cc80452351061e491a = $(`<div id="html_df64cc15f1a0d4cc80452351061e491a" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Clock Tower</h4><br><b>tourism:</b> attraction<br><b>building:</b> yes<br><b>historic:</b> yes<br><b>man_made:</b> tower<br><b>tower:type:</b> clock</div>`)[0];
+                popup_5a52c8980982bb58ade8a03792cce797.setContent(html_df64cc15f1a0d4cc80452351061e491a);
+            
+        
+
+        circle_marker_5b316f41839eae49ba1aa434a9c2821a.bindPopup(popup_5a52c8980982bb58ade8a03792cce797)
+        ;
+
+        
+    
+    
+            circle_marker_5b316f41839eae49ba1aa434a9c2821a.bindTooltip(
+                `<div>
+                     Clock Tower
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0195e359840e4c4a3a00bbb7f2fa4619 = L.circleMarker(
+                [9.9143769, 78.1249825],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_a1cb1cbc7aef572c79ecaf0d9db59113 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b7691dad983b6ceb73909fef6470bfef = $(`<div id="html_b7691dad983b6ceb73909fef6470bfef" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Tirumalai Nayak Palace</h4><br><b>tourism:</b> attraction<br><b>wikidata:</b> Q3536592<br><b>wikipedia:</b> en:Thirumalai Nayakkar Mahal<br><b>name:ta:</b> திருமலை நாயக்கர் அரண்மனை<br><b>wikimedia_commons:</b> Category:Thirumalai Nayakkar Mahal<br><b>name:ml:</b> തിരുമലനായ്ക്കൻ കൊട്ടാരം<br><b>historic:</b> castle<br><b>castle_type:</b> palace<br><b>name:zh:</b> 蒂鲁玛莱·纳亚克宫<br><b>wheelchair:</b> yes</div>`)[0];
+                popup_a1cb1cbc7aef572c79ecaf0d9db59113.setContent(html_b7691dad983b6ceb73909fef6470bfef);
+            
+        
+
+        circle_marker_0195e359840e4c4a3a00bbb7f2fa4619.bindPopup(popup_a1cb1cbc7aef572c79ecaf0d9db59113)
+        ;
+
+        
+    
+    
+            circle_marker_0195e359840e4c4a3a00bbb7f2fa4619.bindTooltip(
+                `<div>
+                     Tirumalai Nayak Palace
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3ce191c3bfad6185c33cb71b62284426 = L.circleMarker(
+                [11.8143585, 78.2160167],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_d74fdfd1ed6779023f14cdbb8adcec42 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e8e03d7b18d54b1805f66097d8d0bead = $(`<div id="html_e8e03d7b18d54b1805f66097d8d0bead" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Cave</h4><br><b>tourism:</b> attraction</div>`)[0];
+                popup_d74fdfd1ed6779023f14cdbb8adcec42.setContent(html_e8e03d7b18d54b1805f66097d8d0bead);
+            
+        
+
+        circle_marker_3ce191c3bfad6185c33cb71b62284426.bindPopup(popup_d74fdfd1ed6779023f14cdbb8adcec42)
+        ;
+
+        
+    
+    
+            circle_marker_3ce191c3bfad6185c33cb71b62284426.bindTooltip(
+                `<div>
+                     Cave
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f6dd5c079dd47dc7b42fcce15d358f04 = L.circleMarker(
+                [11.7907958, 78.6407753],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_15071ebc3b1b01c948fbbed90eb71b53 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f6c66921593441907eff2fcd6949c6ad = $(`<div id="html_f6c66921593441907eff2fcd6949c6ad" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Unnamed Location</h4><br><b>name:en:</b> Panchavati farm<br><b>tourism:</b> attraction</div>`)[0];
+                popup_15071ebc3b1b01c948fbbed90eb71b53.setContent(html_f6c66921593441907eff2fcd6949c6ad);
+            
+        
+
+        circle_marker_f6dd5c079dd47dc7b42fcce15d358f04.bindPopup(popup_15071ebc3b1b01c948fbbed90eb71b53)
+        ;
+
+        
+    
+    
+            circle_marker_f6dd5c079dd47dc7b42fcce15d358f04.bindTooltip(
+                `<div>
+                     Unnamed Location
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8b482e4bbfd832647a16c423970a0851 = L.circleMarker(
+                [11.6420214, 77.7855102],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_0edb18f81807ef3cc06cb3e6b5deb7fc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d3f00a6f2737a108e41f32df91280b66 = $(`<div id="html_d3f00a6f2737a108e41f32df91280b66" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Unnamed Location</h4><br><b>name:en:</b> Kaasikaadu<br><b>tourism:</b> attraction</div>`)[0];
+                popup_0edb18f81807ef3cc06cb3e6b5deb7fc.setContent(html_d3f00a6f2737a108e41f32df91280b66);
+            
+        
+
+        circle_marker_8b482e4bbfd832647a16c423970a0851.bindPopup(popup_0edb18f81807ef3cc06cb3e6b5deb7fc)
+        ;
+
+        
+    
+    
+            circle_marker_8b482e4bbfd832647a16c423970a0851.bindTooltip(
+                `<div>
+                     Unnamed Location
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_faaeadeaac9800472a2cad623b61e71a = L.circleMarker(
+                [11.8069401, 77.7988716],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_2159b7b7aadfd7902c1469ab37000344 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_55e2314271b8fc28928b55389c249d0a = $(`<div id="html_55e2314271b8fc28928b55389c249d0a" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Mettur Dam observation area</h4><br><b>tourism:</b> attraction<br><b>area:</b> yes</div>`)[0];
+                popup_2159b7b7aadfd7902c1469ab37000344.setContent(html_55e2314271b8fc28928b55389c249d0a);
+            
+        
+
+        circle_marker_faaeadeaac9800472a2cad623b61e71a.bindPopup(popup_2159b7b7aadfd7902c1469ab37000344)
+        ;
+
+        
+    
+    
+            circle_marker_faaeadeaac9800472a2cad623b61e71a.bindTooltip(
+                `<div>
+                     Mettur Dam observation area
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_eb6faf7a821b9a1019dd2786e97028a7 = L.circleMarker(
+                [11.0703004, 77.9129609],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_146e7583d071cec180716fafeb8af674 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f7ca1e7551ce4d9aadd83dfb28e00eaf = $(`<div id="html_f7ca1e7551ce4d9aadd83dfb28e00eaf" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Unnamed Location</h4><br><b>name:en:</b> Water falls<br><b>tourism:</b> attraction</div>`)[0];
+                popup_146e7583d071cec180716fafeb8af674.setContent(html_f7ca1e7551ce4d9aadd83dfb28e00eaf);
+            
+        
+
+        circle_marker_eb6faf7a821b9a1019dd2786e97028a7.bindPopup(popup_146e7583d071cec180716fafeb8af674)
+        ;
+
+        
+    
+    
+            circle_marker_eb6faf7a821b9a1019dd2786e97028a7.bindTooltip(
+                `<div>
+                     Unnamed Location
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_42b485477d7d26748d004a33e6a9224c = L.circleMarker(
+                [8.7040092, 77.3639265],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_5216734f8b6e9281f3891a4593e33ece = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_68cfbbadc968cdbfb108c03307a5a6ff = $(`<div id="html_68cfbbadc968cdbfb108c03307a5a6ff" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Agasthyar Falls</h4><br><b>name:en:</b> Agasthyar Falls<br><b>tourism:</b> attraction<br><b>wikidata:</b> Q24938562<br><b>wikipedia:</b> en:Agasthiyar Falls<br><b>name:ta:</b> அகத்தியர் அருவி<br><b>name:ml:</b> അഗസ്ത്യാർ വെള്ളച്ചാട്ടം<br><b>waterway:</b> waterfall</div>`)[0];
+                popup_5216734f8b6e9281f3891a4593e33ece.setContent(html_68cfbbadc968cdbfb108c03307a5a6ff);
+            
+        
+
+        circle_marker_42b485477d7d26748d004a33e6a9224c.bindPopup(popup_5216734f8b6e9281f3891a4593e33ece)
+        ;
+
+        
+    
+    
+            circle_marker_42b485477d7d26748d004a33e6a9224c.bindTooltip(
+                `<div>
+                     Agasthyar Falls
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_40ff617888fd98b746e69c755d2049c7 = L.circleMarker(
+                [8.6798128, 77.3454183],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_9869bb18e78591df23734b3b3a4da113 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2d194fdbfe8302e9a4a34c4482ec57f1 = $(`<div id="html_2d194fdbfe8302e9a4a34c4482ec57f1" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Mundathurai Scantuary</h4><br><b>tourism:</b> attraction</div>`)[0];
+                popup_9869bb18e78591df23734b3b3a4da113.setContent(html_2d194fdbfe8302e9a4a34c4482ec57f1);
+            
+        
+
+        circle_marker_40ff617888fd98b746e69c755d2049c7.bindPopup(popup_9869bb18e78591df23734b3b3a4da113)
+        ;
+
+        
+    
+    
+            circle_marker_40ff617888fd98b746e69c755d2049c7.bindTooltip(
+                `<div>
+                     Mundathurai Scantuary
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7b8f6574ffdecb0b21badac13edeed4f = L.circleMarker(
+                [12.9521471, 78.8888202],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_0f62b549b9dd08edd28efc9cc7edb573 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2808e47b0be2d7f9c183d23ec707cb9d = $(`<div id="html_2808e47b0be2d7f9c183d23ec707cb9d" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Unnamed Location</h4><br><b>name:en:</b> BR bungalow<br><b>tourism:</b> attraction</div>`)[0];
+                popup_0f62b549b9dd08edd28efc9cc7edb573.setContent(html_2808e47b0be2d7f9c183d23ec707cb9d);
+            
+        
+
+        circle_marker_7b8f6574ffdecb0b21badac13edeed4f.bindPopup(popup_0f62b549b9dd08edd28efc9cc7edb573)
+        ;
+
+        
+    
+    
+            circle_marker_7b8f6574ffdecb0b21badac13edeed4f.bindTooltip(
+                `<div>
+                     Unnamed Location
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ccd77f5ce46d88ace78f5c74a19d942b = L.circleMarker(
+                [12.941996, 78.8676046],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_bb51bf6602da5b6610065735ba796e3e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a20762721ab56dbe0994cb5c40616358 = $(`<div id="html_a20762721ab56dbe0994cb5c40616358" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Unnamed Location</h4><br><b>name:en:</b> Kamarajar bridge<br><b>tourism:</b> attraction</div>`)[0];
+                popup_bb51bf6602da5b6610065735ba796e3e.setContent(html_a20762721ab56dbe0994cb5c40616358);
+            
+        
+
+        circle_marker_ccd77f5ce46d88ace78f5c74a19d942b.bindPopup(popup_bb51bf6602da5b6610065735ba796e3e)
+        ;
+
+        
+    
+    
+            circle_marker_ccd77f5ce46d88ace78f5c74a19d942b.bindTooltip(
+                `<div>
+                     Unnamed Location
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_96bcea1eb34e45817eaaf273ec7fbfa6 = L.circleMarker(
+                [12.9376695, 79.1557947],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_263002d6c4477e7cd8f842729f4bebd6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e755116544484141c4fc3c1a0508739f = $(`<div id="html_e755116544484141c4fc3c1a0508739f" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Sathuvachari Government Higher Secondary School</h4><br><b>tourism:</b> attraction</div>`)[0];
+                popup_263002d6c4477e7cd8f842729f4bebd6.setContent(html_e755116544484141c4fc3c1a0508739f);
+            
+        
+
+        circle_marker_96bcea1eb34e45817eaaf273ec7fbfa6.bindPopup(popup_263002d6c4477e7cd8f842729f4bebd6)
+        ;
+
+        
+    
+    
+            circle_marker_96bcea1eb34e45817eaaf273ec7fbfa6.bindTooltip(
+                `<div>
+                     Sathuvachari Government Higher Secondary School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4a522f2c7d5db73ec35de3c522af3330 = L.circleMarker(
+                [12.9205632, 79.1301715],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_c8f0c2fb53c4cd3db8141c18925eaa5e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9bb884c41688ee5d5555b52f93136492 = $(`<div id="html_9bb884c41688ee5d5555b52f93136492" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Vellore Fort</h4><br><b>tourism:</b> attraction<br><b>wikidata:</b> Q3390913<br><b>wikipedia:</b> en:Vellore Fort<br><b>name:ta:</b> வேலூர் கோட்டை<br><b>name:ml:</b> വേലൂർ കോട്ട<br><b>historic:</b> fort<br><b>barrier:</b> city_wall</div>`)[0];
+                popup_c8f0c2fb53c4cd3db8141c18925eaa5e.setContent(html_9bb884c41688ee5d5555b52f93136492);
+            
+        
+
+        circle_marker_4a522f2c7d5db73ec35de3c522af3330.bindPopup(popup_c8f0c2fb53c4cd3db8141c18925eaa5e)
+        ;
+
+        
+    
+    
+            circle_marker_4a522f2c7d5db73ec35de3c522af3330.bindTooltip(
+                `<div>
+                     Vellore Fort
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_95a366d812a6a21d7a77813a3ede78bc = L.circleMarker(
+                [8.4174458, 77.9457014],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_0509de2303ffb0a8c5ea7028a1175615 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a776e4472801e71b73cac2c59ce21fe2 = $(`<div id="html_a776e4472801e71b73cac2c59ce21fe2" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>உபகார மாதா ஆலயம்</h4><br><b>tourism:</b> attraction<br><b>amenity:</b> place_of_worship<br><b>addr:street:</b> navamudalur<br><b>addr:postcode:</b> 628702<br><b>addr:city:</b> Mudalur<br><b>website:</b> https://navamudalur.blogspot.com/<br><b>contact:facebook:</b> https://www.facebook.com/navamudalur/<br><b>denomination:</b> roman_catholic<br><b>religion:</b> christian<br><b>service_times:</b> always</div>`)[0];
+                popup_0509de2303ffb0a8c5ea7028a1175615.setContent(html_a776e4472801e71b73cac2c59ce21fe2);
+            
+        
+
+        circle_marker_95a366d812a6a21d7a77813a3ede78bc.bindPopup(popup_0509de2303ffb0a8c5ea7028a1175615)
+        ;
+
+        
+    
+    
+            circle_marker_95a366d812a6a21d7a77813a3ede78bc.bindTooltip(
+                `<div>
+                     உபகார மாதா ஆலயம்
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0c9ed82e65b2a55a68a1ae7f9545d635 = L.circleMarker(
+                [8.9620922, 77.7726433],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_e1c1933c43f5bdeccd30768344d517ee = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_11f41e8e0dff3140b006d652a162e068 = $(`<div id="html_11f41e8e0dff3140b006d652a162e068" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Unnamed Location</h4><br><b>name:en:</b> King Kattabomman Memorial Place<br><b>tourism:</b> attraction</div>`)[0];
+                popup_e1c1933c43f5bdeccd30768344d517ee.setContent(html_11f41e8e0dff3140b006d652a162e068);
+            
+        
+
+        circle_marker_0c9ed82e65b2a55a68a1ae7f9545d635.bindPopup(popup_e1c1933c43f5bdeccd30768344d517ee)
+        ;
+
+        
+    
+    
+            circle_marker_0c9ed82e65b2a55a68a1ae7f9545d635.bindTooltip(
+                `<div>
+                     Unnamed Location
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b8189ca1c571ede54ee3539712c3a997 = L.circleMarker(
+                [9.1530274, 77.7041956],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_ac2bb3acaaedecaaa3d26124f9f44302 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_19943f3655ff371aafa79714f865abec = $(`<div id="html_19943f3655ff371aafa79714f865abec" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Vettuvaan Koil</h4><br><b>tourism:</b> attraction<br><b>wikidata:</b> Q24289564<br><b>wikipedia:</b> en:Vettuvan Koil<br><b>amenity:</b> place_of_worship<br><b>wikimedia_commons:</b> Category:Vettuvankoil<br><b>building:</b> yes<br><b>religion:</b> hindu</div>`)[0];
+                popup_ac2bb3acaaedecaaa3d26124f9f44302.setContent(html_19943f3655ff371aafa79714f865abec);
+            
+        
+
+        circle_marker_b8189ca1c571ede54ee3539712c3a997.bindPopup(popup_ac2bb3acaaedecaaa3d26124f9f44302)
+        ;
+
+        
+    
+    
+            circle_marker_b8189ca1c571ede54ee3539712c3a997.bindTooltip(
+                `<div>
+                     Vettuvaan Koil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ba17f0f139ba68bd3ed0251545d72974 = L.circleMarker(
+                [11.439855, 76.6600105],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_c32cc068b1bfec1b74bd1aaeb8d4de0b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f454669665e676875cab1e4531a19afd = $(`<div id="html_f454669665e676875cab1e4531a19afd" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Pine forest</h4><br><b>tourism:</b> attraction</div>`)[0];
+                popup_c32cc068b1bfec1b74bd1aaeb8d4de0b.setContent(html_f454669665e676875cab1e4531a19afd);
+            
+        
+
+        circle_marker_ba17f0f139ba68bd3ed0251545d72974.bindPopup(popup_c32cc068b1bfec1b74bd1aaeb8d4de0b)
+        ;
+
+        
+    
+    
+            circle_marker_ba17f0f139ba68bd3ed0251545d72974.bindTooltip(
+                `<div>
+                     Pine forest
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5e4c774f04aa8ef72afc1306e08e0a70 = L.circleMarker(
+                [11.4724972, 76.6047378],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_4fb22fb3edad3c68c76b33707648a66c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c432ecb0da33f84dfa067f766000398f = $(`<div id="html_c432ecb0da33f84dfa067f766000398f" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Pykara Waterfalls</h4><br><b>tourism:</b> attraction<br><b>waterway:</b> waterfall</div>`)[0];
+                popup_4fb22fb3edad3c68c76b33707648a66c.setContent(html_c432ecb0da33f84dfa067f766000398f);
+            
+        
+
+        circle_marker_5e4c774f04aa8ef72afc1306e08e0a70.bindPopup(popup_4fb22fb3edad3c68c76b33707648a66c)
+        ;
+
+        
+    
+    
+            circle_marker_5e4c774f04aa8ef72afc1306e08e0a70.bindTooltip(
+                `<div>
+                     Pykara Waterfalls
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9870397064f065f833df990b72e0e014 = L.circleMarker(
+                [11.4736974, 76.6817784],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_ab7287babff2c05fe53383a0cbed6137 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_063f143489356dc0788816ef4eb6c16d = $(`<div id="html_063f143489356dc0788816ef4eb6c16d" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Unnamed Location</h4><br><b>name:en:</b> 15 | 36<br><b>tourism:</b> attraction</div>`)[0];
+                popup_ab7287babff2c05fe53383a0cbed6137.setContent(html_063f143489356dc0788816ef4eb6c16d);
+            
+        
+
+        circle_marker_9870397064f065f833df990b72e0e014.bindPopup(popup_ab7287babff2c05fe53383a0cbed6137)
+        ;
+
+        
+    
+    
+            circle_marker_9870397064f065f833df990b72e0e014.bindTooltip(
+                `<div>
+                     Unnamed Location
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d56a51583fe22ec7e3ad7ae96e122b2d = L.circleMarker(
+                [11.4762287, 76.6831182],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_0432c101962b17a67f66247982e4b25e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e9ed661f498d24b45e8d4e47ad181cbf = $(`<div id="html_e9ed661f498d24b45e8d4e47ad181cbf" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Unnamed Location</h4><br><b>name:en:</b> 17 | 36 Hair pin bend<br><b>tourism:</b> attraction</div>`)[0];
+                popup_0432c101962b17a67f66247982e4b25e.setContent(html_e9ed661f498d24b45e8d4e47ad181cbf);
+            
+        
+
+        circle_marker_d56a51583fe22ec7e3ad7ae96e122b2d.bindPopup(popup_0432c101962b17a67f66247982e4b25e)
+        ;
+
+        
+    
+    
+            circle_marker_d56a51583fe22ec7e3ad7ae96e122b2d.bindTooltip(
+                `<div>
+                     Unnamed Location
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_68b983f65f34359649ed420e648cb9e8 = L.circleMarker(
+                [11.4989466, 76.3359402],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_592fb50f0034f252104b9b359f28ed21 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f88a1be61f1afe9ec830db40179ca533 = $(`<div id="html_f88a1be61f1afe9ec830db40179ca533" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Unnamed Location</h4><br><b>name:en:</b> Parry agro center<br><b>tourism:</b> attraction</div>`)[0];
+                popup_592fb50f0034f252104b9b359f28ed21.setContent(html_f88a1be61f1afe9ec830db40179ca533);
+            
+        
+
+        circle_marker_68b983f65f34359649ed420e648cb9e8.bindPopup(popup_592fb50f0034f252104b9b359f28ed21)
+        ;
+
+        
+    
+    
+            circle_marker_68b983f65f34359649ed420e648cb9e8.bindTooltip(
+                `<div>
+                     Unnamed Location
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1c4b64500b8033b1fbf679c0847a764d = L.circleMarker(
+                [11.411851, 76.720915],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_8eee7b4ee3ceac9d6fcc5b2c17432753 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_549dd757fa4e0a518d8c4e6074b4209c = $(`<div id="html_549dd757fa4e0a518d8c4e6074b4209c" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>தேயிலை அருங்காட்சியகம், ஊட்டி</h4><br><b>name:en:</b> Tea Museum<br><b>tourism:</b> attraction<br><b>building:</b> yes</div>`)[0];
+                popup_8eee7b4ee3ceac9d6fcc5b2c17432753.setContent(html_549dd757fa4e0a518d8c4e6074b4209c);
+            
+        
+
+        circle_marker_1c4b64500b8033b1fbf679c0847a764d.bindPopup(popup_8eee7b4ee3ceac9d6fcc5b2c17432753)
+        ;
+
+        
+    
+    
+            circle_marker_1c4b64500b8033b1fbf679c0847a764d.bindTooltip(
+                `<div>
+                     தேயிலை அருங்காட்சியகம், ஊட்டி
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_da7584130c57c5f50ccae1c5bcaba20f = L.circleMarker(
+                [11.3550668, 76.8002973],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_e7522aaedebf32e0410bac862af09c73 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6febd6bbf887ed665f31864b859be577 = $(`<div id="html_6febd6bbf887ed665f31864b859be577" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Sims Park</h4><br><b>tourism:</b> attraction<br><b>leisure:</b> park</div>`)[0];
+                popup_e7522aaedebf32e0410bac862af09c73.setContent(html_6febd6bbf887ed665f31864b859be577);
+            
+        
+
+        circle_marker_da7584130c57c5f50ccae1c5bcaba20f.bindPopup(popup_e7522aaedebf32e0410bac862af09c73)
+        ;
+
+        
+    
+    
+            circle_marker_da7584130c57c5f50ccae1c5bcaba20f.bindTooltip(
+                `<div>
+                     Sims Park
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d673c19f81d79ee41a13a4148f272612 = L.circleMarker(
+                [11.4071238, 76.7079371],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_b41a9cffeee71dd57539703e3c613d9e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c1ea2b4b9977b33acaecfac24ad73c54 = $(`<div id="html_c1ea2b4b9977b33acaecfac24ad73c54" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Rose Garden</h4><br><b>tourism:</b> attraction<br><b>leisure:</b> park</div>`)[0];
+                popup_b41a9cffeee71dd57539703e3c613d9e.setContent(html_c1ea2b4b9977b33acaecfac24ad73c54);
+            
+        
+
+        circle_marker_d673c19f81d79ee41a13a4148f272612.bindPopup(popup_b41a9cffeee71dd57539703e3c613d9e)
+        ;
+
+        
+    
+    
+            circle_marker_d673c19f81d79ee41a13a4148f272612.bindTooltip(
+                `<div>
+                     Rose Garden
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_710a4f788b47045e9c1845a6724fd273 = L.circleMarker(
+                [11.4415964, 76.6242128],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_6c55831a723ba1b9df2d3983e8d02814 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c71c5227fe84a076bee9a5b617cc8858 = $(`<div id="html_c71c5227fe84a076bee9a5b617cc8858" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Shooting Spot</h4><br><b>tourism:</b> attraction</div>`)[0];
+                popup_6c55831a723ba1b9df2d3983e8d02814.setContent(html_c71c5227fe84a076bee9a5b617cc8858);
+            
+        
+
+        circle_marker_710a4f788b47045e9c1845a6724fd273.bindPopup(popup_6c55831a723ba1b9df2d3983e8d02814)
+        ;
+
+        
+    
+    
+            circle_marker_710a4f788b47045e9c1845a6724fd273.bindTooltip(
+                `<div>
+                     Shooting Spot
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9234426bd71ceaa2df84276728f67d71 = L.circleMarker(
+                [11.4415964, 76.6242128],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_52e54fc69d29aa4c5f4e19c38d1e7143 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0bda479008405c2a720292feb8bc11b1 = $(`<div id="html_0bda479008405c2a720292feb8bc11b1" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Shooting Spot</h4><br><b>tourism:</b> attraction</div>`)[0];
+                popup_52e54fc69d29aa4c5f4e19c38d1e7143.setContent(html_0bda479008405c2a720292feb8bc11b1);
+            
+        
+
+        circle_marker_9234426bd71ceaa2df84276728f67d71.bindPopup(popup_52e54fc69d29aa4c5f4e19c38d1e7143)
+        ;
+
+        
+    
+    
+            circle_marker_9234426bd71ceaa2df84276728f67d71.bindTooltip(
+                `<div>
+                     Shooting Spot
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c284d48ad6d77cfb833fd3fd5f02cb78 = L.circleMarker(
+                [11.4116321, 76.7347813],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_b56741f92a89741228946cd52f438370 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_17f54f0add4a5eb6d598c418f7297da6 = $(`<div id="html_17f54f0add4a5eb6d598c418f7297da6" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Government Tea Park</h4><br><b>tourism:</b> attraction<br><b>leisure:</b> park</div>`)[0];
+                popup_b56741f92a89741228946cd52f438370.setContent(html_17f54f0add4a5eb6d598c418f7297da6);
+            
+        
+
+        circle_marker_c284d48ad6d77cfb833fd3fd5f02cb78.bindPopup(popup_b56741f92a89741228946cd52f438370)
+        ;
+
+        
+    
+    
+            circle_marker_c284d48ad6d77cfb833fd3fd5f02cb78.bindTooltip(
+                `<div>
+                     Government Tea Park
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_650928b1f45c52b48305e79eed396171 = L.circleMarker(
+                [11.3638137, 76.8041325],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_da0a6975d375bde2159327e7f1c2b81a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6c65844adad459b66de3bf45b4e6a791 = $(`<div id="html_6c65844adad459b66de3bf45b4e6a791" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Unnamed Location</h4><br><b>name:en:</b> Highfield Tea Factory<br><b>tourism:</b> attraction<br><b>addr:street:</b> Coonoor-Kattabettu-Kotagiri<br><b>addr:postcode:</b> 643231<br><b>landuse:</b> industrial</div>`)[0];
+                popup_da0a6975d375bde2159327e7f1c2b81a.setContent(html_6c65844adad459b66de3bf45b4e6a791);
+            
+        
+
+        circle_marker_650928b1f45c52b48305e79eed396171.bindPopup(popup_da0a6975d375bde2159327e7f1c2b81a)
+        ;
+
+        
+    
+    
+            circle_marker_650928b1f45c52b48305e79eed396171.bindTooltip(
+                `<div>
+                     Unnamed Location
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2114389b5b45b2fa2748d02ea1215618 = L.circleMarker(
+                [11.3592618, 76.8351187],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_7a0c94515b22223b1ac359a48fd34048);
+        
+    
+        var popup_47dfedf7225050381be4ebeec6934da2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_232e2048c62bae4d69f4f991d2fbbfd8 = $(`<div id="html_232e2048c62bae4d69f4f991d2fbbfd8" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Benchmark Coonoor Tea Factory</h4><br><b>tourism:</b> attraction<br><b>landuse:</b> industrial<br><b>man_made:</b> works<br><b>product:</b> tea</div>`)[0];
+                popup_47dfedf7225050381be4ebeec6934da2.setContent(html_232e2048c62bae4d69f4f991d2fbbfd8);
+            
+        
+
+        circle_marker_2114389b5b45b2fa2748d02ea1215618.bindPopup(popup_47dfedf7225050381be4ebeec6934da2)
+        ;
+
+        
+    
+    
+            circle_marker_2114389b5b45b2fa2748d02ea1215618.bindTooltip(
+                `<div>
+                     Benchmark Coonoor Tea Factory
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

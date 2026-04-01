@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_393457efa914cae641f4b410329f8e6b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_393457efa914cae641f4b410329f8e6b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_393457efa914cae641f4b410329f8e6b = L.map(
+                "map_393457efa914cae641f4b410329f8e6b",
+                {
+                    center: [11.1271, 78.6569],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_393457efa914cae641f4b410329f8e6b);
+
+            
+
+        
+    
+            var tile_layer_c44c69e8d14a42294b84c83be1dd2da7 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c44c69e8d14a42294b84c83be1dd2da7.addTo(map_393457efa914cae641f4b410329f8e6b);
+        
+    
+            var circle_marker_fb68c89d3abad064fa24852d316db161 = L.circleMarker(
+                [13.0597354, 80.2578777],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 42.5, "stroke": true, "weight": 3}
+            ).addTo(map_393457efa914cae641f4b410329f8e6b);
+        
+    
+        var popup_5d9c9050d6262a16bae40a8860d6516b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ed3f240e4dba195d22f9915a4f6a0242 = $(`<div id="html_ed3f240e4dba195d22f9915a4f6a0242" style="width: 100.0%; height: 100.0%;">None<br>Nearby hotels: 75</div>`)[0];
+                popup_5d9c9050d6262a16bae40a8860d6516b.setContent(html_ed3f240e4dba195d22f9915a4f6a0242);
+            
+        
+
+        circle_marker_fb68c89d3abad064fa24852d316db161.bindPopup(popup_5d9c9050d6262a16bae40a8860d6516b)
+        ;
+
+        
+    
+    
+            var circle_marker_ab2813b22513d12a8113a1ba19223231 = L.circleMarker(
+                [13.0684992, 80.2605802],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 36.5, "stroke": true, "weight": 3}
+            ).addTo(map_393457efa914cae641f4b410329f8e6b);
+        
+    
+        var popup_68335404a30ecd4a828b4c896688e532 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_39d5d8626aedaa0d1322e0da64d497fb = $(`<div id="html_39d5d8626aedaa0d1322e0da64d497fb" style="width: 100.0%; height: 100.0%;">DUGAR GROUP OF COMPANY<br>Nearby hotels: 63</div>`)[0];
+                popup_68335404a30ecd4a828b4c896688e532.setContent(html_39d5d8626aedaa0d1322e0da64d497fb);
+            
+        
+
+        circle_marker_ab2813b22513d12a8113a1ba19223231.bindPopup(popup_68335404a30ecd4a828b4c896688e532)
+        ;
+
+        
+    
+    
+            var circle_marker_ef4db7d926330683a2ac79531459943a = L.circleMarker(
+                [11.4175169, 76.7105539],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 34.5, "stroke": true, "weight": 3}
+            ).addTo(map_393457efa914cae641f4b410329f8e6b);
+        
+    
+        var popup_3a27228d6e94587163da5deb3ef0df8c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1682c2b9e9be9fc986b174063ae9a3f1 = $(`<div id="html_1682c2b9e9be9fc986b174063ae9a3f1" style="width: 100.0%; height: 100.0%;">None<br>Nearby hotels: 59</div>`)[0];
+                popup_3a27228d6e94587163da5deb3ef0df8c.setContent(html_1682c2b9e9be9fc986b174063ae9a3f1);
+            
+        
+
+        circle_marker_ef4db7d926330683a2ac79531459943a.bindPopup(popup_3a27228d6e94587163da5deb3ef0df8c)
+        ;
+
+        
+    
+    
+            var circle_marker_54133b2ac2a6fa278b0a098f3d77724c = L.circleMarker(
+                [11.4031401, 76.6898215],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 33.5, "stroke": true, "weight": 3}
+            ).addTo(map_393457efa914cae641f4b410329f8e6b);
+        
+    
+        var popup_2e85294c469ce61fafbf25539fe87c8a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0f83e391daf353561cfc73755f532540 = $(`<div id="html_0f83e391daf353561cfc73755f532540" style="width: 100.0%; height: 100.0%;">Deer Park<br>Nearby hotels: 57</div>`)[0];
+                popup_2e85294c469ce61fafbf25539fe87c8a.setContent(html_0f83e391daf353561cfc73755f532540);
+            
+        
+
+        circle_marker_54133b2ac2a6fa278b0a098f3d77724c.bindPopup(popup_2e85294c469ce61fafbf25539fe87c8a)
+        ;
+
+        
+    
+    
+            var circle_marker_ada0bb94ab4d05c105b0c9dab49e729e = L.circleMarker(
+                [11.4042416, 76.6939742],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 33.5, "stroke": true, "weight": 3}
+            ).addTo(map_393457efa914cae641f4b410329f8e6b);
+        
+    
+        var popup_2b877ff69e12cd6b051cfcde230c4a37 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5602b2e74f779e03fb42854b0a1fbc7f = $(`<div id="html_5602b2e74f779e03fb42854b0a1fbc7f" style="width: 100.0%; height: 100.0%;">None<br>Nearby hotels: 57</div>`)[0];
+                popup_2b877ff69e12cd6b051cfcde230c4a37.setContent(html_5602b2e74f779e03fb42854b0a1fbc7f);
+            
+        
+
+        circle_marker_ada0bb94ab4d05c105b0c9dab49e729e.bindPopup(popup_2b877ff69e12cd6b051cfcde230c4a37)
+        ;
+
+        
+    
+    
+            var circle_marker_7d8a76bb813728c9c90822036dc94287 = L.circleMarker(
+                [11.4067875, 76.6879831],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 32.5, "stroke": true, "weight": 3}
+            ).addTo(map_393457efa914cae641f4b410329f8e6b);
+        
+    
+        var popup_657c3ea82f14fac47ce04b5e3dad8ba6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ea0b082884362e6011f28833bb454b6c = $(`<div id="html_ea0b082884362e6011f28833bb454b6c" style="width: 100.0%; height: 100.0%;">Thread Garden<br>Nearby hotels: 55</div>`)[0];
+                popup_657c3ea82f14fac47ce04b5e3dad8ba6.setContent(html_ea0b082884362e6011f28833bb454b6c);
+            
+        
+
+        circle_marker_7d8a76bb813728c9c90822036dc94287.bindPopup(popup_657c3ea82f14fac47ce04b5e3dad8ba6)
+        ;
+
+        
+    
+    
+            var circle_marker_9dbcbd7862e765144ec0d27b6e7786c8 = L.circleMarker(
+                [13.0497991, 80.2426022],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30.0, "stroke": true, "weight": 3}
+            ).addTo(map_393457efa914cae641f4b410329f8e6b);
+        
+    
+        var popup_eb9c44a41752b56177b26caba89d9d9e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_10f800c6ac75b2a92ed4b04116f6941a = $(`<div id="html_10f800c6ac75b2a92ed4b04116f6941a" style="width: 100.0%; height: 100.0%;">None<br>Nearby hotels: 50</div>`)[0];
+                popup_eb9c44a41752b56177b26caba89d9d9e.setContent(html_10f800c6ac75b2a92ed4b04116f6941a);
+            
+        
+
+        circle_marker_9dbcbd7862e765144ec0d27b6e7786c8.bindPopup(popup_eb9c44a41752b56177b26caba89d9d9e)
+        ;
+
+        
+    
+    
+            var circle_marker_a785dbe57cc136732ed6032ea612d0e5 = L.circleMarker(
+                [11.4143402, 76.7224149],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 29.0, "stroke": true, "weight": 3}
+            ).addTo(map_393457efa914cae641f4b410329f8e6b);
+        
+    
+        var popup_eb36d4d7d9854b57b4ca6c90e82f28ae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1abd119865a2d7be0fab204321ca24a7 = $(`<div id="html_1abd119865a2d7be0fab204321ca24a7" style="width: 100.0%; height: 100.0%;">None<br>Nearby hotels: 48</div>`)[0];
+                popup_eb36d4d7d9854b57b4ca6c90e82f28ae.setContent(html_1abd119865a2d7be0fab204321ca24a7);
+            
+        
+
+        circle_marker_a785dbe57cc136732ed6032ea612d0e5.bindPopup(popup_eb36d4d7d9854b57b4ca6c90e82f28ae)
+        ;
+
+        
+    
+    
+            var circle_marker_98b1eb8952f127396fb4533193372127 = L.circleMarker(
+                [9.9197522, 78.1232992],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 28.5, "stroke": true, "weight": 3}
+            ).addTo(map_393457efa914cae641f4b410329f8e6b);
+        
+    
+        var popup_e0a5e7760d0926d7fab206d68290281d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d9bf64f5a5b82c6baea6caf8dfc3492d = $(`<div id="html_d9bf64f5a5b82c6baea6caf8dfc3492d" style="width: 100.0%; height: 100.0%;">Temple Holy Car Shelter<br>Nearby hotels: 47</div>`)[0];
+                popup_e0a5e7760d0926d7fab206d68290281d.setContent(html_d9bf64f5a5b82c6baea6caf8dfc3492d);
+            
+        
+
+        circle_marker_98b1eb8952f127396fb4533193372127.bindPopup(popup_e0a5e7760d0926d7fab206d68290281d)
+        ;
+
+        
+    
+    
+            var circle_marker_5ef09d52ab57a60d57a025ffa9617fd8 = L.circleMarker(
+                [9.9202673, 78.1232384],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 28.5, "stroke": true, "weight": 3}
+            ).addTo(map_393457efa914cae641f4b410329f8e6b);
+        
+    
+        var popup_65d7005c3572179486584a732a2e0614 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d077429b5cc456454f48220a8beca5c4 = $(`<div id="html_d077429b5cc456454f48220a8beca5c4" style="width: 100.0%; height: 100.0%;">Temple Holy Car Shelter<br>Nearby hotels: 47</div>`)[0];
+                popup_65d7005c3572179486584a732a2e0614.setContent(html_d077429b5cc456454f48220a8beca5c4);
+            
+        
+
+        circle_marker_5ef09d52ab57a60d57a025ffa9617fd8.bindPopup(popup_65d7005c3572179486584a732a2e0614)
+        ;
+
+        
+    
+    
+            var circle_marker_26ac9a69673faae4a7a584417e655cb1 = L.circleMarker(
+                [11.4115914, 76.7290145],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 24.5, "stroke": true, "weight": 3}
+            ).addTo(map_393457efa914cae641f4b410329f8e6b);
+        
+    
+        var popup_2b327b33b1c14e59e6dc036f96954a51 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4d6fd058a776a001666ff0eef40c7194 = $(`<div id="html_4d6fd058a776a001666ff0eef40c7194" style="width: 100.0%; height: 100.0%;">None<br>Nearby hotels: 39</div>`)[0];
+                popup_2b327b33b1c14e59e6dc036f96954a51.setContent(html_4d6fd058a776a001666ff0eef40c7194);
+            
+        
+
+        circle_marker_26ac9a69673faae4a7a584417e655cb1.bindPopup(popup_2b327b33b1c14e59e6dc036f96954a51)
+        ;
+
+        
+    
+    
+            var circle_marker_6358be3e00838899ac8e28c67ec1e52a = L.circleMarker(
+                [9.9128786, 78.1141991],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 24.0, "stroke": true, "weight": 3}
+            ).addTo(map_393457efa914cae641f4b410329f8e6b);
+        
+    
+        var popup_eb0978429b15228031205fc511bc7702 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bb8ff756cc4eecd509beb4c25e8f854e = $(`<div id="html_bb8ff756cc4eecd509beb4c25e8f854e" style="width: 100.0%; height: 100.0%;">None<br>Nearby hotels: 38</div>`)[0];
+                popup_eb0978429b15228031205fc511bc7702.setContent(html_bb8ff756cc4eecd509beb4c25e8f854e);
+            
+        
+
+        circle_marker_6358be3e00838899ac8e28c67ec1e52a.bindPopup(popup_eb0978429b15228031205fc511bc7702)
+        ;
+
+        
+    
+    
+            var circle_marker_df6b59529e7d976dab877b091cd72a1d = L.circleMarker(
+                [11.4016246, 76.6827677],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.5, "stroke": true, "weight": 3}
+            ).addTo(map_393457efa914cae641f4b410329f8e6b);
+        
+    
+        var popup_63327f543501a01e73b0d40b2c70df96 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_985041e70046e4db80e8022edec9cdfb = $(`<div id="html_985041e70046e4db80e8022edec9cdfb" style="width: 100.0%; height: 100.0%;">None<br>Nearby hotels: 33</div>`)[0];
+                popup_63327f543501a01e73b0d40b2c70df96.setContent(html_985041e70046e4db80e8022edec9cdfb);
+            
+        
+
+        circle_marker_df6b59529e7d976dab877b091cd72a1d.bindPopup(popup_63327f543501a01e73b0d40b2c70df96)
+        ;
+
+        
+    
+    
+            var circle_marker_3dd8dffb14c0f8a63132e25c20cadec4 = L.circleMarker(
+                [11.4041834, 76.6803739],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.5, "stroke": true, "weight": 3}
+            ).addTo(map_393457efa914cae641f4b410329f8e6b);
+        
+    
+        var popup_3d006db72b6103ce395b5963e92b0584 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_57ee9ab324d58d458f695d21f84ad4da = $(`<div id="html_57ee9ab324d58d458f695d21f84ad4da" style="width: 100.0%; height: 100.0%;">Honeymoon Boat House<br>Nearby hotels: 29</div>`)[0];
+                popup_3d006db72b6103ce395b5963e92b0584.setContent(html_57ee9ab324d58d458f695d21f84ad4da);
+            
+        
+
+        circle_marker_3dd8dffb14c0f8a63132e25c20cadec4.bindPopup(popup_3d006db72b6103ce395b5963e92b0584)
+        ;
+
+        
+    
+    
+            var circle_marker_c06c9589375d1741b6ce52b8cca98f21 = L.circleMarker(
+                [13.0323409, 80.2200818],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.0, "stroke": true, "weight": 3}
+            ).addTo(map_393457efa914cae641f4b410329f8e6b);
+        
+    
+        var popup_1f13305611ecc3ae4073b7372e781974 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_32cef61e043598cd7a1d0f05e1fa6a39 = $(`<div id="html_32cef61e043598cd7a1d0f05e1fa6a39" style="width: 100.0%; height: 100.0%;">CHICKEN 65 SHOP<br>Nearby hotels: 28</div>`)[0];
+                popup_1f13305611ecc3ae4073b7372e781974.setContent(html_32cef61e043598cd7a1d0f05e1fa6a39);
+            
+        
+
+        circle_marker_c06c9589375d1741b6ce52b8cca98f21.bindPopup(popup_1f13305611ecc3ae4073b7372e781974)
+        ;
+
+        
+    
+    
+            var circle_marker_54546e11743e4d0156411706df586327 = L.circleMarker(
+                [13.039631, 80.2794168],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.5, "stroke": true, "weight": 3}
+            ).addTo(map_393457efa914cae641f4b410329f8e6b);
+        
+    
+        var popup_3a913ddd64643fdaeb752f612e0d42d2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_583b8412aea7dc635bff07fcfba4ccb2 = $(`<div id="html_583b8412aea7dc635bff07fcfba4ccb2" style="width: 100.0%; height: 100.0%;">சென்னை மெரினா கலங்கரை விளக்கம்<br>Nearby hotels: 25</div>`)[0];
+                popup_3a913ddd64643fdaeb752f612e0d42d2.setContent(html_583b8412aea7dc635bff07fcfba4ccb2);
+            
+        
+
+        circle_marker_54546e11743e4d0156411706df586327.bindPopup(popup_3a913ddd64643fdaeb752f612e0d42d2)
+        ;
+
+        
+    
+    
+            var circle_marker_5ae5afce0c88e20834fe0cedeef2eaed = L.circleMarker(
+                [13.0337069, 80.2122522],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.0, "stroke": true, "weight": 3}
+            ).addTo(map_393457efa914cae641f4b410329f8e6b);
+        
+    
+        var popup_18f484730ab950646bc5f2ab3585620e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_52c617c16e635bbd8ae45c68e236b14c = $(`<div id="html_52c617c16e635bbd8ae45c68e236b14c" style="width: 100.0%; height: 100.0%;">BHARAT SCANS<br>Nearby hotels: 22</div>`)[0];
+                popup_18f484730ab950646bc5f2ab3585620e.setContent(html_52c617c16e635bbd8ae45c68e236b14c);
+            
+        
+
+        circle_marker_5ae5afce0c88e20834fe0cedeef2eaed.bindPopup(popup_18f484730ab950646bc5f2ab3585620e)
+        ;
+
+        
+    
+    
+            var circle_marker_a833255fda5765d6e88916abb937b3ec = L.circleMarker(
+                [13.0298561, 80.2135171],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.0, "stroke": true, "weight": 3}
+            ).addTo(map_393457efa914cae641f4b410329f8e6b);
+        
+    
+        var popup_ef7aaf1dd6faee3277776345a37b5381 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_33e8de4bcca27832c2187632b306800b = $(`<div id="html_33e8de4bcca27832c2187632b306800b" style="width: 100.0%; height: 100.0%;">None<br>Nearby hotels: 22</div>`)[0];
+                popup_ef7aaf1dd6faee3277776345a37b5381.setContent(html_33e8de4bcca27832c2187632b306800b);
+            
+        
+
+        circle_marker_a833255fda5765d6e88916abb937b3ec.bindPopup(popup_ef7aaf1dd6faee3277776345a37b5381)
+        ;
+
+        
+    
+    
+            var circle_marker_a4358aa8bae753fb7a7cbccf59be8a08 = L.circleMarker(
+                [13.0347941, 80.273749],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.0, "stroke": true, "weight": 3}
+            ).addTo(map_393457efa914cae641f4b410329f8e6b);
+        
+    
+        var popup_32b0512532ae7d640dda4062cd1a62e5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e1422c7ab29274483b892f8f655e188d = $(`<div id="html_e1422c7ab29274483b892f8f655e188d" style="width: 100.0%; height: 100.0%;">அக்பர் மருந்து மில்<br>Nearby hotels: 22</div>`)[0];
+                popup_32b0512532ae7d640dda4062cd1a62e5.setContent(html_e1422c7ab29274483b892f8f655e188d);
+            
+        
+
+        circle_marker_a4358aa8bae753fb7a7cbccf59be8a08.bindPopup(popup_32b0512532ae7d640dda4062cd1a62e5)
+        ;
+
+        
+    
+    
+            var circle_marker_ca8642522c0273d05a0771e0e941631e = L.circleMarker(
+                [11.400931, 76.7354661],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.0, "stroke": true, "weight": 3}
+            ).addTo(map_393457efa914cae641f4b410329f8e6b);
+        
+    
+        var popup_1874845b13ac6f9b8ce038d0090d8134 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_36d3264f0f61d0f0e4f7774429217841 = $(`<div id="html_36d3264f0f61d0f0e4f7774429217841" style="width: 100.0%; height: 100.0%;">Telescope House<br>Nearby hotels: 22</div>`)[0];
+                popup_1874845b13ac6f9b8ce038d0090d8134.setContent(html_36d3264f0f61d0f0e4f7774429217841);
+            
+        
+
+        circle_marker_ca8642522c0273d05a0771e0e941631e.bindPopup(popup_1874845b13ac6f9b8ce038d0090d8134)
+        ;
+
+        
+    
+</script>
+</html>

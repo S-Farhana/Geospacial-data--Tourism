@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_98348fd108b400ad7c72bbe7c37edecf {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; 
+                top: 10px; left: 50px; width: 350px; height: 40px; 
+                background-color: white; z-index: 9999; padding: 10px;
+                border: 2px solid grey; border-radius: 5px;">
+        <b>Optimal Hotel Location Candidates</b>
+    </div>
+    
+    
+    <div style="position: fixed; 
+                bottom: 50px; right: 50px; width: 220px; height: 140px;
+                background-color: white; z-index: 9999; padding: 10px;
+                border: 2px solid grey; border-radius: 5px; font-size: 12px;">
+        <b>Score Legend</b><br>
+        <span style="color: darkgreen;">● Excellent (70-100%)</span><br>
+        <span style="color: green;">● Good (40-70%)</span><br>
+        <span style="color: lightgreen;">● Fair (0-40%)</span><br>
+        Score Range: -4.2 to 4.4<br>
+        Size = Score Importance
+    </div>
+    
+    
+            <div class="folium-map" id="map_98348fd108b400ad7c72bbe7c37edecf" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_98348fd108b400ad7c72bbe7c37edecf = L.map(
+                "map_98348fd108b400ad7c72bbe7c37edecf",
+                {
+                    center: [11.1271, 78.6569],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_98348fd108b400ad7c72bbe7c37edecf);
+
+            
+
+        
+    
+            var tile_layer_48b67bf783a03d552a93732796ca0b51 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_48b67bf783a03d552a93732796ca0b51.addTo(map_98348fd108b400ad7c72bbe7c37edecf);
+        
+    
+            var circle_marker_0cb412e59b5c46753faf4a9789db9cb9 = L.circleMarker(
+                [11.439855, 76.6600105],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.0, "stroke": true, "weight": 3}
+            ).addTo(map_98348fd108b400ad7c72bbe7c37edecf);
+        
+    
+        var popup_f7e1ff5e6b96bb17ac2c191144d2f82d = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_e44e9cf5555d9f78bf893996714abcf9 = $(`<div id="html_e44e9cf5555d9f78bf893996714abcf9" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; font-size: 12px;">             <h4 style="margin: 0 0 15px 0; color: #333;">Pine forest</h4>             <table style="border-collapse: collapse; width: 100%;">                 <tr>                     <td style="padding: 6px; border-bottom: 1px solid #eee; font-weight: bold;">Overall Score:</td>                     <td style="padding: 6px; border-bottom: 1px solid #eee; text-align: right; font-weight: bold; color: green;">4.41</td>                 </tr>                 <tr>                     <td style="padding: 6px; border-bottom: 1px solid #eee;">Attraction Density:</td>                     <td style="padding: 6px; border-bottom: 1px solid #eee; text-align: right;">5</td>                 </tr>                 <tr>                     <td style="padding: 6px; border-bottom: 1px solid #eee;">Hotel Density:</td>                     <td style="padding: 6px; border-bottom: 1px solid #eee; text-align: right;">0</td>                 </tr>                 <tr>                     <td style="padding: 6px;">Distance to City:</td>                     <td style="padding: 6px; text-align: right;">5.6 km</td>                 </tr>             </table>             <p style="margin-top: 10px; font-size: 11px; color: #666;">                 <i>Higher scores indicate better locations for new hotels</i>             </p>         </div>         </div>`)[0];
+                popup_f7e1ff5e6b96bb17ac2c191144d2f82d.setContent(html_e44e9cf5555d9f78bf893996714abcf9);
+            
+        
+
+        circle_marker_0cb412e59b5c46753faf4a9789db9cb9.bindPopup(popup_f7e1ff5e6b96bb17ac2c191144d2f82d)
+        ;
+
+        
+    
+    
+            circle_marker_0cb412e59b5c46753faf4a9789db9cb9.bindTooltip(
+                `<div>
+                     Pine forest: Score 4.41
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f5c874495b93b647de70a34c28368cfa = L.circleMarker(
+                [12.941996, 78.8676046],
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.882032609699166, "stroke": true, "weight": 3}
+            ).addTo(map_98348fd108b400ad7c72bbe7c37edecf);
+        
+    
+        var popup_be492d1a538e829a03e297f33745d38d = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_27c52a2cc7e4bcb9412705c4a02bf30a = $(`<div id="html_27c52a2cc7e4bcb9412705c4a02bf30a" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; font-size: 12px;">             <h4 style="margin: 0 0 15px 0; color: #333;">None</h4>             <table style="border-collapse: collapse; width: 100%;">                 <tr>                     <td style="padding: 6px; border-bottom: 1px solid #eee; font-weight: bold;">Overall Score:</td>                     <td style="padding: 6px; border-bottom: 1px solid #eee; text-align: right; font-weight: bold; color: red;">-0.80</td>                 </tr>                 <tr>                     <td style="padding: 6px; border-bottom: 1px solid #eee;">Attraction Density:</td>                     <td style="padding: 6px; border-bottom: 1px solid #eee; text-align: right;">0</td>                 </tr>                 <tr>                     <td style="padding: 6px; border-bottom: 1px solid #eee;">Hotel Density:</td>                     <td style="padding: 6px; border-bottom: 1px solid #eee; text-align: right;">0</td>                 </tr>                 <tr>                     <td style="padding: 6px;">Distance to City:</td>                     <td style="padding: 6px; text-align: right;">0.8 km</td>                 </tr>             </table>             <p style="margin-top: 10px; font-size: 11px; color: #666;">                 <i>Higher scores indicate better locations for new hotels</i>             </p>         </div>         </div>`)[0];
+                popup_be492d1a538e829a03e297f33745d38d.setContent(html_27c52a2cc7e4bcb9412705c4a02bf30a);
+            
+        
+
+        circle_marker_f5c874495b93b647de70a34c28368cfa.bindPopup(popup_be492d1a538e829a03e297f33745d38d)
+        ;
+
+        
+    
+    
+            circle_marker_f5c874495b93b647de70a34c28368cfa.bindTooltip(
+                `<div>
+                     None: Score -0.80
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ba848d29aa92604ec00ede56f2788e3b = L.circleMarker(
+                [8.7040092, 77.3639265],
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.507871241404134, "stroke": true, "weight": 3}
+            ).addTo(map_98348fd108b400ad7c72bbe7c37edecf);
+        
+    
+        var popup_acfea0379222c34eccabf91dae4366d2 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_6de9a2dd688ec3874b268bb9601be5f8 = $(`<div id="html_6de9a2dd688ec3874b268bb9601be5f8" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; font-size: 12px;">             <h4 style="margin: 0 0 15px 0; color: #333;">Agasthyar Falls</h4>             <table style="border-collapse: collapse; width: 100%;">                 <tr>                     <td style="padding: 6px; border-bottom: 1px solid #eee; font-weight: bold;">Overall Score:</td>                     <td style="padding: 6px; border-bottom: 1px solid #eee; text-align: right; font-weight: bold; color: red;">-1.01</td>                 </tr>                 <tr>                     <td style="padding: 6px; border-bottom: 1px solid #eee;">Attraction Density:</td>                     <td style="padding: 6px; border-bottom: 1px solid #eee; text-align: right;">1</td>                 </tr>                 <tr>                     <td style="padding: 6px; border-bottom: 1px solid #eee;">Hotel Density:</td>                     <td style="padding: 6px; border-bottom: 1px solid #eee; text-align: right;">0</td>                 </tr>                 <tr>                     <td style="padding: 6px;">Distance to City:</td>                     <td style="padding: 6px; text-align: right;">3.0 km</td>                 </tr>             </table>             <p style="margin-top: 10px; font-size: 11px; color: #666;">                 <i>Higher scores indicate better locations for new hotels</i>             </p>         </div>         </div>`)[0];
+                popup_acfea0379222c34eccabf91dae4366d2.setContent(html_6de9a2dd688ec3874b268bb9601be5f8);
+            
+        
+
+        circle_marker_ba848d29aa92604ec00ede56f2788e3b.bindPopup(popup_acfea0379222c34eccabf91dae4366d2)
+        ;
+
+        
+    
+    
+            circle_marker_ba848d29aa92604ec00ede56f2788e3b.bindTooltip(
+                `<div>
+                     Agasthyar Falls: Score -1.01
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_793489c1d08b1e818345789e05412a2d = L.circleMarker(
+                [11.4989466, 76.3359402],
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.812447207018383, "stroke": true, "weight": 3}
+            ).addTo(map_98348fd108b400ad7c72bbe7c37edecf);
+        
+    
+        var popup_dac05c1adc5ea51917bf62cb9209d71a = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_61a281c93e30867ca19222e2b564570b = $(`<div id="html_61a281c93e30867ca19222e2b564570b" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; font-size: 12px;">             <h4 style="margin: 0 0 15px 0; color: #333;">None</h4>             <table style="border-collapse: collapse; width: 100%;">                 <tr>                     <td style="padding: 6px; border-bottom: 1px solid #eee; font-weight: bold;">Overall Score:</td>                     <td style="padding: 6px; border-bottom: 1px solid #eee; text-align: right; font-weight: bold; color: red;">-1.41</td>                 </tr>                 <tr>                     <td style="padding: 6px; border-bottom: 1px solid #eee;">Attraction Density:</td>                     <td style="padding: 6px; border-bottom: 1px solid #eee; text-align: right;">0</td>                 </tr>                 <tr>                     <td style="padding: 6px; border-bottom: 1px solid #eee;">Hotel Density:</td>                     <td style="padding: 6px; border-bottom: 1px solid #eee; text-align: right;">0</td>                 </tr>                 <tr>                     <td style="padding: 6px;">Distance to City:</td>                     <td style="padding: 6px; text-align: right;">1.4 km</td>                 </tr>             </table>             <p style="margin-top: 10px; font-size: 11px; color: #666;">                 <i>Higher scores indicate better locations for new hotels</i>             </p>         </div>         </div>`)[0];
+                popup_dac05c1adc5ea51917bf62cb9209d71a.setContent(html_61a281c93e30867ca19222e2b564570b);
+            
+        
+
+        circle_marker_793489c1d08b1e818345789e05412a2d.bindPopup(popup_dac05c1adc5ea51917bf62cb9209d71a)
+        ;
+
+        
+    
+    
+            circle_marker_793489c1d08b1e818345789e05412a2d.bindTooltip(
+                `<div>
+                     None: Score -1.41
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0394bf4000dbed7b458196e2019bfc36 = L.circleMarker(
+                [8.9620922, 77.7726433],
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.522509286970259, "stroke": true, "weight": 3}
+            ).addTo(map_98348fd108b400ad7c72bbe7c37edecf);
+        
+    
+        var popup_59454b44ed956759fcae4e1b290580e3 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_554f2ea9ecf214d29b667da125fa3d46 = $(`<div id="html_554f2ea9ecf214d29b667da125fa3d46" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; font-size: 12px;">             <h4 style="margin: 0 0 15px 0; color: #333;">None</h4>             <table style="border-collapse: collapse; width: 100%;">                 <tr>                     <td style="padding: 6px; border-bottom: 1px solid #eee; font-weight: bold;">Overall Score:</td>                     <td style="padding: 6px; border-bottom: 1px solid #eee; text-align: right; font-weight: bold; color: red;">-1.57</td>                 </tr>                 <tr>                     <td style="padding: 6px; border-bottom: 1px solid #eee;">Attraction Density:</td>                     <td style="padding: 6px; border-bottom: 1px solid #eee; text-align: right;">0</td>                 </tr>                 <tr>                     <td style="padding: 6px; border-bottom: 1px solid #eee;">Hotel Density:</td>                     <td style="padding: 6px; border-bottom: 1px solid #eee; text-align: right;">0</td>                 </tr>                 <tr>                     <td style="padding: 6px;">Distance to City:</td>                     <td style="padding: 6px; text-align: right;">1.6 km</td>                 </tr>             </table>             <p style="margin-top: 10px; font-size: 11px; color: #666;">                 <i>Higher scores indicate better locations for new hotels</i>             </p>         </div>         </div>`)[0];
+                popup_59454b44ed956759fcae4e1b290580e3.setContent(html_554f2ea9ecf214d29b667da125fa3d46);
+            
+        
+
+        circle_marker_0394bf4000dbed7b458196e2019bfc36.bindPopup(popup_59454b44ed956759fcae4e1b290580e3)
+        ;
+
+        
+    
+    
+            circle_marker_0394bf4000dbed7b458196e2019bfc36.bindTooltip(
+                `<div>
+                     None: Score -1.57
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_afcf17e7e6efc8641dd4e6793fab1f97 = L.circleMarker(
+                [12.9521471, 78.8888202],
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.737080781142458, "stroke": true, "weight": 3}
+            ).addTo(map_98348fd108b400ad7c72bbe7c37edecf);
+        
+    
+        var popup_5603e77dc0b8958835bb2273bea31f36 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_5293aafee64591f4baceac14045d57c3 = $(`<div id="html_5293aafee64591f4baceac14045d57c3" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; font-size: 12px;">             <h4 style="margin: 0 0 15px 0; color: #333;">None</h4>             <table style="border-collapse: collapse; width: 100%;">                 <tr>                     <td style="padding: 6px; border-bottom: 1px solid #eee; font-weight: bold;">Overall Score:</td>                     <td style="padding: 6px; border-bottom: 1px solid #eee; text-align: right; font-weight: bold; color: red;">-2.02</td>                 </tr>                 <tr>                     <td style="padding: 6px; border-bottom: 1px solid #eee;">Attraction Density:</td>                     <td style="padding: 6px; border-bottom: 1px solid #eee; text-align: right;">0</td>                 </tr>                 <tr>                     <td style="padding: 6px; border-bottom: 1px solid #eee;">Hotel Density:</td>                     <td style="padding: 6px; border-bottom: 1px solid #eee; text-align: right;">0</td>                 </tr>                 <tr>                     <td style="padding: 6px;">Distance to City:</td>                     <td style="padding: 6px; text-align: right;">2.0 km</td>                 </tr>             </table>             <p style="margin-top: 10px; font-size: 11px; color: #666;">                 <i>Higher scores indicate better locations for new hotels</i>             </p>         </div>         </div>`)[0];
+                popup_5603e77dc0b8958835bb2273bea31f36.setContent(html_5293aafee64591f4baceac14045d57c3);
+            
+        
+
+        circle_marker_afcf17e7e6efc8641dd4e6793fab1f97.bindPopup(popup_5603e77dc0b8958835bb2273bea31f36)
+        ;
+
+        
+    
+    
+            circle_marker_afcf17e7e6efc8641dd4e6793fab1f97.bindTooltip(
+                `<div>
+                     None: Score -2.02
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e326d872f4f130ee8b4107c403795f33 = L.circleMarker(
+                [11.0703004, 77.9129609],
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.014707829066223, "stroke": true, "weight": 3}
+            ).addTo(map_98348fd108b400ad7c72bbe7c37edecf);
+        
+    
+        var popup_95a62fe2e35022b9a02b8312a8da1281 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_ad394a66c0d8bcad57f7ffebd0349913 = $(`<div id="html_ad394a66c0d8bcad57f7ffebd0349913" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; font-size: 12px;">             <h4 style="margin: 0 0 15px 0; color: #333;">None</h4>             <table style="border-collapse: collapse; width: 100%;">                 <tr>                     <td style="padding: 6px; border-bottom: 1px solid #eee; font-weight: bold;">Overall Score:</td>                     <td style="padding: 6px; border-bottom: 1px solid #eee; text-align: right; font-weight: bold; color: red;">-3.01</td>                 </tr>                 <tr>                     <td style="padding: 6px; border-bottom: 1px solid #eee;">Attraction Density:</td>                     <td style="padding: 6px; border-bottom: 1px solid #eee; text-align: right;">0</td>                 </tr>                 <tr>                     <td style="padding: 6px; border-bottom: 1px solid #eee;">Hotel Density:</td>                     <td style="padding: 6px; border-bottom: 1px solid #eee; text-align: right;">0</td>                 </tr>                 <tr>                     <td style="padding: 6px;">Distance to City:</td>                     <td style="padding: 6px; text-align: right;">3.0 km</td>                 </tr>             </table>             <p style="margin-top: 10px; font-size: 11px; color: #666;">                 <i>Higher scores indicate better locations for new hotels</i>             </p>         </div>         </div>`)[0];
+                popup_95a62fe2e35022b9a02b8312a8da1281.setContent(html_ad394a66c0d8bcad57f7ffebd0349913);
+            
+        
+
+        circle_marker_e326d872f4f130ee8b4107c403795f33.bindPopup(popup_95a62fe2e35022b9a02b8312a8da1281)
+        ;
+
+        
+    
+    
+            circle_marker_e326d872f4f130ee8b4107c403795f33.bindTooltip(
+                `<div>
+                     None: Score -3.01
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_155644561c0020d69637399b6a07f61f = L.circleMarker(
+                [11.8143585, 78.2160167],
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.3741313386037, "stroke": true, "weight": 3}
+            ).addTo(map_98348fd108b400ad7c72bbe7c37edecf);
+        
+    
+        var popup_1408e00e790bc77ab21d47d4a67fa8fa = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_ed267fff86f31cc6ee543b010bde170c = $(`<div id="html_ed267fff86f31cc6ee543b010bde170c" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; font-size: 12px;">             <h4 style="margin: 0 0 15px 0; color: #333;">Cave</h4>             <table style="border-collapse: collapse; width: 100%;">                 <tr>                     <td style="padding: 6px; border-bottom: 1px solid #eee; font-weight: bold;">Overall Score:</td>                     <td style="padding: 6px; border-bottom: 1px solid #eee; text-align: right; font-weight: bold; color: red;">-3.37</td>                 </tr>                 <tr>                     <td style="padding: 6px; border-bottom: 1px solid #eee;">Attraction Density:</td>                     <td style="padding: 6px; border-bottom: 1px solid #eee; text-align: right;">0</td>                 </tr>                 <tr>                     <td style="padding: 6px; border-bottom: 1px solid #eee;">Hotel Density:</td>                     <td style="padding: 6px; border-bottom: 1px solid #eee; text-align: right;">0</td>                 </tr>                 <tr>                     <td style="padding: 6px;">Distance to City:</td>                     <td style="padding: 6px; text-align: right;">3.4 km</td>                 </tr>             </table>             <p style="margin-top: 10px; font-size: 11px; color: #666;">                 <i>Higher scores indicate better locations for new hotels</i>             </p>         </div>         </div>`)[0];
+                popup_1408e00e790bc77ab21d47d4a67fa8fa.setContent(html_ed267fff86f31cc6ee543b010bde170c);
+            
+        
+
+        circle_marker_155644561c0020d69637399b6a07f61f.bindPopup(popup_1408e00e790bc77ab21d47d4a67fa8fa)
+        ;
+
+        
+    
+    
+            circle_marker_155644561c0020d69637399b6a07f61f.bindTooltip(
+                `<div>
+                     Cave: Score -3.37
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ad3ed8ad9a9a21817e9d7a89682b9b8a = L.circleMarker(
+                [11.0607736, 77.1119484],
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.162726348894745, "stroke": true, "weight": 3}
+            ).addTo(map_98348fd108b400ad7c72bbe7c37edecf);
+        
+    
+        var popup_dfab6a03850821401de113b04ca331a2 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_48d7e498b7d6784a64c083f4ced0b34f = $(`<div id="html_48d7e498b7d6784a64c083f4ced0b34f" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; font-size: 12px;">             <h4 style="margin: 0 0 15px 0; color: #333;">None</h4>             <table style="border-collapse: collapse; width: 100%;">                 <tr>                     <td style="padding: 6px; border-bottom: 1px solid #eee; font-weight: bold;">Overall Score:</td>                     <td style="padding: 6px; border-bottom: 1px solid #eee; text-align: right; font-weight: bold; color: red;">-4.07</td>                 </tr>                 <tr>                     <td style="padding: 6px; border-bottom: 1px solid #eee;">Attraction Density:</td>                     <td style="padding: 6px; border-bottom: 1px solid #eee; text-align: right;">0</td>                 </tr>                 <tr>                     <td style="padding: 6px; border-bottom: 1px solid #eee;">Hotel Density:</td>                     <td style="padding: 6px; border-bottom: 1px solid #eee; text-align: right;">0</td>                 </tr>                 <tr>                     <td style="padding: 6px;">Distance to City:</td>                     <td style="padding: 6px; text-align: right;">4.1 km</td>                 </tr>             </table>             <p style="margin-top: 10px; font-size: 11px; color: #666;">                 <i>Higher scores indicate better locations for new hotels</i>             </p>         </div>         </div>`)[0];
+                popup_dfab6a03850821401de113b04ca331a2.setContent(html_48d7e498b7d6784a64c083f4ced0b34f);
+            
+        
+
+        circle_marker_ad3ed8ad9a9a21817e9d7a89682b9b8a.bindPopup(popup_dfab6a03850821401de113b04ca331a2)
+        ;
+
+        
+    
+    
+            circle_marker_ad3ed8ad9a9a21817e9d7a89682b9b8a.bindTooltip(
+                `<div>
+                     None: Score -4.07
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8b516cc2109e4b8de44f07255cd1b5b0 = L.circleMarker(
+                [8.6798128, 77.3454183],
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.0, "stroke": true, "weight": 3}
+            ).addTo(map_98348fd108b400ad7c72bbe7c37edecf);
+        
+    
+        var popup_8696e3835543d5d0f5115a9482004c05 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_d6d7d1298d4f2c03455b858bb02fafd5 = $(`<div id="html_d6d7d1298d4f2c03455b858bb02fafd5" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; font-size: 12px;">             <h4 style="margin: 0 0 15px 0; color: #333;">Mundathurai Scantuary</h4>             <table style="border-collapse: collapse; width: 100%;">                 <tr>                     <td style="padding: 6px; border-bottom: 1px solid #eee; font-weight: bold;">Overall Score:</td>                     <td style="padding: 6px; border-bottom: 1px solid #eee; text-align: right; font-weight: bold; color: red;">-4.16</td>                 </tr>                 <tr>                     <td style="padding: 6px; border-bottom: 1px solid #eee;">Attraction Density:</td>                     <td style="padding: 6px; border-bottom: 1px solid #eee; text-align: right;">1</td>                 </tr>                 <tr>                     <td style="padding: 6px; border-bottom: 1px solid #eee;">Hotel Density:</td>                     <td style="padding: 6px; border-bottom: 1px solid #eee; text-align: right;">0</td>                 </tr>                 <tr>                     <td style="padding: 6px;">Distance to City:</td>                     <td style="padding: 6px; text-align: right;">6.2 km</td>                 </tr>             </table>             <p style="margin-top: 10px; font-size: 11px; color: #666;">                 <i>Higher scores indicate better locations for new hotels</i>             </p>         </div>         </div>`)[0];
+                popup_8696e3835543d5d0f5115a9482004c05.setContent(html_d6d7d1298d4f2c03455b858bb02fafd5);
+            
+        
+
+        circle_marker_8b516cc2109e4b8de44f07255cd1b5b0.bindPopup(popup_8696e3835543d5d0f5115a9482004c05)
+        ;
+
+        
+    
+    
+            circle_marker_8b516cc2109e4b8de44f07255cd1b5b0.bindTooltip(
+                `<div>
+                     Mundathurai Scantuary: Score -4.16
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

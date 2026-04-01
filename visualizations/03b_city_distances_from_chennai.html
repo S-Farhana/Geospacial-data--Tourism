@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_dca7c47e400d79f603be937035ade74e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_dca7c47e400d79f603be937035ade74e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_dca7c47e400d79f603be937035ade74e = L.map(
+                "map_dca7c47e400d79f603be937035ade74e",
+                {
+                    center: [13.0827, 80.2707],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_dca7c47e400d79f603be937035ade74e);
+
+            
+
+        
+    
+            var tile_layer_62f082f5608a02c567cc26b000ccb7b8 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_62f082f5608a02c567cc26b000ccb7b8.addTo(map_dca7c47e400d79f603be937035ade74e);
+        
+    
+            var circle_marker_0890040f27f0a39f6927a6e992019186 = L.circleMarker(
+                [13.0836939, 80.270186],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_dca7c47e400d79f603be937035ade74e);
+        
+    
+        var popup_62b4ba616c2b70a5b654142615b35a10 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_5d3ffd5e12825d8f6f6ca9bec75326c6 = $(`<div id="html_5d3ffd5e12825d8f6f6ca9bec75326c6" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0; color: #333;'>Chennai</h4>         <div style="font-family: Arial, sans-serif; font-size: 12px;">             <table style="border-collapse: collapse; width: 100%;">                      <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>alt_name:ur</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">چنائی</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>alt_name:zh</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">钦奈;清奈;真奈</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>alt_name_2:ur</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">چینئی</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>capital</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">4</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>gns:dsg</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">ADM2</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>gns:uni</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">-2919695</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>is_capital</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">state</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>is_in:country</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">India</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>name:ar</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">تشيناي</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>name:bn</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">চেন্নাই</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>name:cs</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">Čennaí</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>name:de</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">Chennai</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>name:en</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">Chennai</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>name:fa</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">چنای</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>name:fr</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">Chennai</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>name:he</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">צ'נאי</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>name:hi</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">चेन्नई</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>name:hr</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">Chennai</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>name:ja</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">チェンナイ</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>name:kn</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">ಚೆನ್ನೈ</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>name:ko</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">첸나이</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>name:lt</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">Čenajus</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>name:ml</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">ചെന്നൈ</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>name:mr</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">चेन्नई</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>name:ne</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">चेन्नई</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>name:pl</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">Ćennaj</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>name:ru</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">Ченнаи</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>name:sat</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">ᱪᱮᱱᱱᱟᱭ</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>name:ta</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">சென்னை</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>name:te</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">చెన్నై</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>name:tr</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">Madras</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>name:uk</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">Ченнаї</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>name:ur</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">چنئی</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>name:zh</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">金奈</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>old_name</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">Madras</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>old_name:uk</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">Мадрас</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>place</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">city</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>place:cca</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">a1</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>population</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">4681087</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>postal_code</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">600001</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>source</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">GNS;http://en.wikipedia.org/wiki/Chennai</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>wikidata</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">Q1352</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>wikipedia</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">en:Chennai</td>             </tr>                          </table>         </div>         </div>`)[0];
+                popup_62b4ba616c2b70a5b654142615b35a10.setContent(html_5d3ffd5e12825d8f6f6ca9bec75326c6);
+            
+        
+
+        circle_marker_0890040f27f0a39f6927a6e992019186.bindPopup(popup_62b4ba616c2b70a5b654142615b35a10)
+        ;
+
+        
+    
+    
+            circle_marker_0890040f27f0a39f6927a6e992019186.bindTooltip(
+                `<div>
+                     Chennai
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c523c63282f7de319c9212d6e8bdbc55 = L.circleMarker(
+                [12.9857071, 79.2638223],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_dca7c47e400d79f603be937035ade74e);
+        
+    
+        var popup_bfa3523e92ed16ef2c5a9d016b1a4131 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ccde98d56ebd7ab71fce9dbba537137b = $(`<div id="html_ccde98d56ebd7ab71fce9dbba537137b" style="width: 100.0%; height: 100.0%;">Thiruvalam<br>Distance: 109.7 km</div>`)[0];
+                popup_bfa3523e92ed16ef2c5a9d016b1a4131.setContent(html_ccde98d56ebd7ab71fce9dbba537137b);
+            
+        
+
+        circle_marker_c523c63282f7de319c9212d6e8bdbc55.bindPopup(popup_bfa3523e92ed16ef2c5a9d016b1a4131)
+        ;
+
+        
+    
+    
+            var circle_marker_b276bd8b054d7d25b8ebb0c1c96672e2 = L.circleMarker(
+                [12.9071753, 79.1309695],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_dca7c47e400d79f603be937035ade74e);
+        
+    
+        var popup_e8901e04c454bfcdd86fd5e315955542 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b47941bcfb9364d4cfe5f6b0fab1b3cf = $(`<div id="html_b47941bcfb9364d4cfe5f6b0fab1b3cf" style="width: 100.0%; height: 100.0%;">Vellore<br>Distance: 125.1 km</div>`)[0];
+                popup_e8901e04c454bfcdd86fd5e315955542.setContent(html_b47941bcfb9364d4cfe5f6b0fab1b3cf);
+            
+        
+
+        circle_marker_b276bd8b054d7d25b8ebb0c1c96672e2.bindPopup(popup_e8901e04c454bfcdd86fd5e315955542)
+        ;
+
+        
+    
+    
+            var circle_marker_2210371a57a010661f9aea1fa3343b65 = L.circleMarker(
+                [12.8454374, 79.1351952],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_dca7c47e400d79f603be937035ade74e);
+        
+    
+        var popup_b0b4e59201f87a5e997bfbd70b9296a3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5720776f2d35367a918d326ffc5285cc = $(`<div id="html_5720776f2d35367a918d326ffc5285cc" style="width: 100.0%; height: 100.0%;">Adukkamparai<br>Distance: 125.9 km</div>`)[0];
+                popup_b0b4e59201f87a5e997bfbd70b9296a3.setContent(html_5720776f2d35367a918d326ffc5285cc);
+            
+        
+
+        circle_marker_2210371a57a010661f9aea1fa3343b65.bindPopup(popup_b0b4e59201f87a5e997bfbd70b9296a3)
+        ;
+
+        
+    
+    
+            var circle_marker_1de9750011ec6c9fc4891ec027bf68b6 = L.circleMarker(
+                [12.905489, 78.940936],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_dca7c47e400d79f603be937035ade74e);
+        
+    
+        var popup_dbd8e9aa6382bc437ab64193c706e3ef = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9f0bb187a35fb8c581962ad66a598aeb = $(`<div id="html_9f0bb187a35fb8c581962ad66a598aeb" style="width: 100.0%; height: 100.0%;">Pallikondai<br>Distance: 145.5 km</div>`)[0];
+                popup_dbd8e9aa6382bc437ab64193c706e3ef.setContent(html_9f0bb187a35fb8c581962ad66a598aeb);
+            
+        
+
+        circle_marker_1de9750011ec6c9fc4891ec027bf68b6.bindPopup(popup_dbd8e9aa6382bc437ab64193c706e3ef)
+        ;
+
+        
+    
+    
+            var circle_marker_925f960ae801a17a8cb2abf681777d2e = L.circleMarker(
+                [12.9485676, 78.8705336],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_dca7c47e400d79f603be937035ade74e);
+        
+    
+        var popup_03ec072ad74444721d3461c0e45f3737 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_95cfc1fa0bea3456195d02523768c455 = $(`<div id="html_95cfc1fa0bea3456195d02523768c455" style="width: 100.0%; height: 100.0%;">Gudiyatham<br>Distance: 152.5 km</div>`)[0];
+                popup_03ec072ad74444721d3461c0e45f3737.setContent(html_95cfc1fa0bea3456195d02523768c455);
+            
+        
+
+        circle_marker_925f960ae801a17a8cb2abf681777d2e.bindPopup(popup_03ec072ad74444721d3461c0e45f3737)
+        ;
+
+        
+    
+</script>
+</html>

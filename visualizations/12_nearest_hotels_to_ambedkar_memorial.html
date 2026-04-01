@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_58b87b1eebe06c6e0c2505ba89388323 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; 
+                top: 10px; left: 50px; width: 300px; height: 40px; 
+                background-color: white; z-index: 9999; padding: 10px;
+                border: 2px solid grey; border-radius: 5px;">
+        <b>Ambedkar Memorial</b><br>
+        Context Map
+    </div>
+    
+    
+    <div style="position: fixed; 
+                bottom: 50px; right: 50px; width: 150px; height: 120px;
+                background-color: white; z-index: 9999; padding: 10px;
+                border: 2px solid grey; border-radius: 5px; font-size: 12px;">
+        <b>Legend</b><br>
+        <span style="color: red;">● Attraction</span><br>
+        <span style="color: blue;">● Hotels</span><br>
+        <span style="color: green;">● Nearest City</span>
+    </div>
+    
+    
+            <div class="folium-map" id="map_58b87b1eebe06c6e0c2505ba89388323" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_58b87b1eebe06c6e0c2505ba89388323 = L.map(
+                "map_58b87b1eebe06c6e0c2505ba89388323",
+                {
+                    center: [13.0193208, 80.266984],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 14,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_58b87b1eebe06c6e0c2505ba89388323);
+
+            
+
+        
+    
+            var tile_layer_0361bd1b1caf9bc9deeb7349262bc283 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0361bd1b1caf9bc9deeb7349262bc283.addTo(map_58b87b1eebe06c6e0c2505ba89388323);
+        
+    
+            var circle_marker_9da55bbf9f98138ff3b7adafde5a068b = L.circleMarker(
+                [13.0193208, 80.266984],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_58b87b1eebe06c6e0c2505ba89388323);
+        
+    
+        var popup_0e26d97254c72d20921230a545f7fd68 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_ba40133ad0be68c2aa87757cee46c0ee = $(`<div id="html_ba40133ad0be68c2aa87757cee46c0ee" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0; color: #333;'>Ambedkar Memorial</h4>         <div style="font-family: Arial, sans-serif; font-size: 12px;">             <table style="border-collapse: collapse; width: 100%;">                      <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>name:en</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">Ambedkar Memorial</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>tourism</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">attraction</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>wikidata</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">Q15179678</td>             </tr>                           <tr>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: left;"><b>wikipedia</b></td>                 <td style="padding: 4px; border-bottom: 1px solid #eee; text-align: right;">en:Ambedkar Manimandapam, Chennai</td>             </tr>                          </table>         </div>         </div>`)[0];
+                popup_0e26d97254c72d20921230a545f7fd68.setContent(html_ba40133ad0be68c2aa87757cee46c0ee);
+            
+        
+
+        circle_marker_9da55bbf9f98138ff3b7adafde5a068b.bindPopup(popup_0e26d97254c72d20921230a545f7fd68)
+        ;
+
+        
+    
+    
+            circle_marker_9da55bbf9f98138ff3b7adafde5a068b.bindTooltip(
+                `<div>
+                     Attraction: Ambedkar Memorial
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f3e63212a23450dca99b2d33dd1f78a9 = L.circleMarker(
+                [13.0186427, 80.2610083],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_58b87b1eebe06c6e0c2505ba89388323);
+        
+    
+        var popup_40aa6a88be3d6722a93a54e5ef64aa48 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d9479fda0e759ffa9dc10bfff67c77a6 = $(`<div id="html_d9479fda0e759ffa9dc10bfff67c77a6" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Unnamed Location</h4><br><b>tourism:</b> hotel<br><b>addr:street:</b> Durgabai Deshmukh Road<br><b>website:</b> http://www.hotelrajpalacesundar.com<br><b>internet_access:</b> wlan<br><b>name:es:</b> ams raj palace sundar</div>`)[0];
+                popup_40aa6a88be3d6722a93a54e5ef64aa48.setContent(html_d9479fda0e759ffa9dc10bfff67c77a6);
+            
+        
+
+        circle_marker_f3e63212a23450dca99b2d33dd1f78a9.bindPopup(popup_40aa6a88be3d6722a93a54e5ef64aa48)
+        ;
+
+        
+    
+    
+            circle_marker_f3e63212a23450dca99b2d33dd1f78a9.bindTooltip(
+                `<div>
+                     Unnamed Location - Unnamed Location
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bb69ae13a4c870f149d06c223cff8c4f = L.circleMarker(
+                [13.0328612, 80.2660641],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_58b87b1eebe06c6e0c2505ba89388323);
+        
+    
+        var popup_7da6b0eef80f3d397755bea7eb67f574 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_dc507107c3cb8248f4eff1e7a8dba0f7 = $(`<div id="html_dc507107c3cb8248f4eff1e7a8dba0f7" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Hotel Shelter Inn</h4><br><b>tourism:</b> hotel<br><b>addr:street:</b> Venkatesa Agraharam<br><b>website:</b> https://www.hotelshelter.com/</div>`)[0];
+                popup_7da6b0eef80f3d397755bea7eb67f574.setContent(html_dc507107c3cb8248f4eff1e7a8dba0f7);
+            
+        
+
+        circle_marker_bb69ae13a4c870f149d06c223cff8c4f.bindPopup(popup_7da6b0eef80f3d397755bea7eb67f574)
+        ;
+
+        
+    
+    
+            circle_marker_bb69ae13a4c870f149d06c223cff8c4f.bindTooltip(
+                `<div>
+                     Hotel Shelter Inn - Hotel Shelter Inn
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_45fa1c306e61db2bd5beea9369289660 = L.circleMarker(
+                [13.007268, 80.2594014],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_58b87b1eebe06c6e0c2505ba89388323);
+        
+    
+        var popup_43a4d72ba5dd4708595eb2ddfd82463f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1c374f548caa1cb0919dbdc43c07786a = $(`<div id="html_1c374f548caa1cb0919dbdc43c07786a" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Esthell Continental Hotel</h4><br><b>tourism:</b> hotel</div>`)[0];
+                popup_43a4d72ba5dd4708595eb2ddfd82463f.setContent(html_1c374f548caa1cb0919dbdc43c07786a);
+            
+        
+
+        circle_marker_45fa1c306e61db2bd5beea9369289660.bindPopup(popup_43a4d72ba5dd4708595eb2ddfd82463f)
+        ;
+
+        
+    
+    
+            circle_marker_45fa1c306e61db2bd5beea9369289660.bindTooltip(
+                `<div>
+                     Esthell Continental Hotel - Esthell Continental Hotel
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a6b33ba8cb7d1df8851ed8bc1191927d = L.circleMarker(
+                [13.028834, 80.253197],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_58b87b1eebe06c6e0c2505ba89388323);
+        
+    
+        var popup_04f819834fd7bc4da1040af6d4778138 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_abadb3930bf52fdfa9ae1624b6b55bea = $(`<div id="html_abadb3930bf52fdfa9ae1624b6b55bea" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Raintree</h4><br><b>tourism:</b> hotel</div>`)[0];
+                popup_04f819834fd7bc4da1040af6d4778138.setContent(html_abadb3930bf52fdfa9ae1624b6b55bea);
+            
+        
+
+        circle_marker_a6b33ba8cb7d1df8851ed8bc1191927d.bindPopup(popup_04f819834fd7bc4da1040af6d4778138)
+        ;
+
+        
+    
+    
+            circle_marker_a6b33ba8cb7d1df8851ed8bc1191927d.bindTooltip(
+                `<div>
+                     Raintree - Raintree
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2ab7702131d3f92c00d2dd1643412370 = L.circleMarker(
+                [13.0363286, 80.2679907],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_58b87b1eebe06c6e0c2505ba89388323);
+        
+    
+        var popup_b19fba98b297a449f78a1e6538b01f27 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ebfe7c9fb1d1a1d7fb25ba5d0544a868 = $(`<div id="html_ebfe7c9fb1d1a1d7fb25ba5d0544a868" style="width: 100.0%; height: 100.0%;"><h4 style='margin: 0 0 10px 0;'>Hotel Picnic</h4><br><b>tourism:</b> hotel</div>`)[0];
+                popup_b19fba98b297a449f78a1e6538b01f27.setContent(html_ebfe7c9fb1d1a1d7fb25ba5d0544a868);
+            
+        
+
+        circle_marker_2ab7702131d3f92c00d2dd1643412370.bindPopup(popup_b19fba98b297a449f78a1e6538b01f27)
+        ;
+
+        
+    
+    
+            circle_marker_2ab7702131d3f92c00d2dd1643412370.bindTooltip(
+                `<div>
+                     Hotel Picnic - Hotel Picnic
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
